@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="zxx"><!-- InstanceBegin template="/Templates/index.dwt" codeOutsideHTMLIsLocked="false" -->
+<html lang="zxx">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- InstanceBeginEditable name="EditRegion2" -->
+<!-- TemplateBeginEditable name="EditRegion2" -->
 <title>Madhus Advertising - Bootstrap jQuery Layout</title>
-<!-- InstanceEndEditable -->
-<link href="images/favicon.ico" rel="icon" type="image/x-icon">
+<!-- TemplateEndEditable -->
+<link href="../images/favicon.ico" rel="icon" type="image/x-icon">
 <!-- Bootstrap -->
-<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-<link href="css/stylesheet1.css" rel="stylesheet">
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
+<link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
+<link href="../css/stylesheet1.css" rel="stylesheet">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
 </head>
 
 <body>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-3.4.1.min.js"></script> 
+<script src="../js/jquery-3.4.1.min.js"></script> 
 <div class="madhus_pgmargin">
   <header>
     <div class="container">
-      <nav class="navbar navbar-expand-lg justify-content-between"> <a class="navbar-brand" href="#"><img src="images/Logo.png" width="1024" height="1024" alt="Madhus & Madhus Advertising"></a>
+      <nav class="navbar navbar-expand-lg justify-content-between"> <a class="navbar-brand" href="#"><img src="../images/Logo.png" width="1024" height="1024" alt="Madhus & Madhus Advertising"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#madhusNav1" aria-controls="madhusNav1" aria-expanded="false" aria-label="Toggle navigation" id="madhusbtn1"> &#9776; </button>
         <div class="collapse navbar-collapse" id="madhusNav1">
           <ul class="navbar-nav navbar-right">
-            <li class="nav-item active"> <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
-            <li class="nav-item"> <a class="nav-link" href="about-us.html">About</a> </li>
+            <li class="nav-item active"> <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a> </li>
+            <li class="nav-item"> <a class="nav-link" href="../about-us.html">About</a> </li>
             <li class="nav-item"> <a class="nav-link" href="#">Services</a> </li>
             <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Specifications </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">Hoardings</a> <a class="dropdown-item" href="#">LED Sign Boards</a> <a class="dropdown-item" href="#">Outdoor Branding</a> <a class="dropdown-item" href="#">Digital Marketing Services</a> <a class="dropdown-item" href="#">Web and Graphic Design Developments</a> </div>
@@ -51,16 +51,16 @@
     </div>
   </header>
   <main>
-	  <!-- InstanceBeginEditable name="EditRegion1" -->
+	  <!-- TemplateBeginEditable name="EditRegion1" -->
     <section id="madhuscarousel" class="carousel verticle slide" data-ride="carousel" data-interval="5000" data-pause="false" data-bs-touch="false">
       <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active"><span class="carousel-bg" style="background-image: url('images/gallery/IMG-20181217-WA0043-1.jpg')"></span> </div>
-        <div class="carousel-item"><span class="carousel-bg" style="background-image: url('images/gallery/20181224_090902-1-scaled.jpg')"></span> </div>
-        <div class="carousel-item"><span class="carousel-bg" style="background-image: url('images/gallery/Kollam_-_Shankers_Jn_-_Kadappakkada_-__60_X_30-1.jpg')"></span> </div>
-        <div class="carousel-item"><span class="carousel-bg" style="background-image: url('images/gallery/IMG_7714-1-scaled.jpg')"></span> </div>
-        <div class="carousel-item"><span class="carousel-bg" style="background-image: url('images/gallery/east_fort_30_x_20_-_5_boards-1.jpg')"></span> </div>
-        <div class="carousel-item"><span class="carousel-bg" style="background-image: url('images/gallery/MADHU-AND-MADHU.jpg')"></span></div>
-        <div class="carousel-item"><span class="carousel-bg" style="background-image: url('images/gallery/mobile_hoarding_mock_up_chennai_race_-_Copy-1-scaled.jpg')"></span></div>
+        <div class="carousel-item active"><span class="carousel-bg" style="background-image: url('../images/gallery/IMG-20181217-WA0043-1.jpg')"></span> </div>
+        <div class="carousel-item"><span class="carousel-bg" style="background-image: url('../images/gallery/20181224_090902-1-scaled.jpg')"></span> </div>
+        <div class="carousel-item"><span class="carousel-bg" style="background-image: url('../images/gallery/Kollam_-_Shankers_Jn_-_Kadappakkada_-__60_X_30-1.jpg')"></span> </div>
+        <div class="carousel-item"><span class="carousel-bg" style="background-image: url('../images/gallery/IMG_7714-1-scaled.jpg')"></span> </div>
+        <div class="carousel-item"><span class="carousel-bg" style="background-image: url('../images/gallery/east_fort_30_x_20_-_5_boards-1.jpg')"></span> </div>
+        <div class="carousel-item"><span class="carousel-bg" style="background-image: url('../images/gallery/MADHU-AND-MADHU.jpg')"></span></div>
+        <div class="carousel-item"><span class="carousel-bg" style="background-image: url('../images/gallery/mobile_hoarding_mock_up_chennai_race_-_Copy-1-scaled.jpg')"></span></div>
         <div class="carousel_text d-flex align-items-center justify-content-center">
           <div class="carousel_text_1">
             <div class="container text-center">
@@ -76,7 +76,7 @@
           </div>
         </div>
       </div>
-      <div id="Carousel_shape1"> <img src="images/waves.svg" width="300" height="150" alt="Shape - waves"> </div>
+      <div id="Carousel_shape1"> <img src="../images/waves.svg" width="300" height="150" alt="Shape - waves"> </div>
     </section>
     <section id="madhus_services">
       <div class="container">
@@ -128,7 +128,7 @@
             </div>
           </div>
         </div>
-        <div class="madhus_service_list_bg" data-aos="fade-down"><img src="images/backgrounds/Hoarding_ad-display-Madhus-Advertising.png" alt="Hoarding AD display Madhus Advertising" width="1024" height="693"></div>
+        <div class="madhus_service_list_bg" data-aos="fade-down"><img src="../images/backgrounds/Hoarding_ad-display-Madhus-Advertising.png" alt="Hoarding AD display Madhus Advertising" width="1024" height="693"></div>
       </div>
     </section>
     <section id="madhus_clients">
@@ -138,47 +138,47 @@
           <div class="col-xl-3 col-sm-6">
             <div class="madhus_clients_1">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/clients/4-2.png" width="105" height="37" alt="Azzezia"></div>
-                <div class="swiper-slide"><img src="images/clients/5.png" width="108" height="40" alt="LIC"></div>
-                <div class="swiper-slide"><img src="images/clients/6.png" width="107" height="37" alt="Gionee"></div>
-                <div class="swiper-slide"><img src="images/clients/7.png" width="105" height="32" alt="Pulimootil Silks"></div>
-                <div class="swiper-slide"><img src="images/clients/8.png" width="107" height="38" alt="Golkonda Handicrafts"></div>
-                <div class="swiper-slide"><img src="images/clients/9.png" width="109" height="39" alt="Fashion"></div>
+                <div class="swiper-slide"><img src="../images/clients/4-2.png" width="105" height="37" alt="Azzezia"></div>
+                <div class="swiper-slide"><img src="../images/clients/5.png" width="108" height="40" alt="LIC"></div>
+                <div class="swiper-slide"><img src="../images/clients/6.png" width="107" height="37" alt="Gionee"></div>
+                <div class="swiper-slide"><img src="../images/clients/7.png" width="105" height="32" alt="Pulimootil Silks"></div>
+                <div class="swiper-slide"><img src="../images/clients/8.png" width="107" height="38" alt="Golkonda Handicrafts"></div>
+                <div class="swiper-slide"><img src="../images/clients/9.png" width="109" height="39" alt="Fashion"></div>
               </div>
             </div>
           </div>
           <div class="col-xl-3 col-sm-6">
             <div class="madhus_clients_1">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/clients/17.png" width="109" height="34" alt="MK Fabrics"></div>
-                <div class="swiper-slide"><img src="images/clients/18.png" width="106" height="41" alt="KOLLAM SUPREME"></div>
-                <div class="swiper-slide"><img src="images/clients/19.png" width="107" height="38" alt="iball"></div>
-                <div class="swiper-slide"><img src="images/clients/20.png" width="105" height="36" alt="FEDERAL BANK"></div>
-                <div class="swiper-slide"><img src="images/clients/21.png" width="109" height="44" alt="HOTEL ALL SEASON"></div>
-                <div class="swiper-slide"><img src="images/clients/22-1.png" width="107" height="40" alt="Elite"></div>
+                <div class="swiper-slide"><img src="../images/clients/17.png" width="109" height="34" alt="MK Fabrics"></div>
+                <div class="swiper-slide"><img src="../images/clients/18.png" width="106" height="41" alt="KOLLAM SUPREME"></div>
+                <div class="swiper-slide"><img src="../images/clients/19.png" width="107" height="38" alt="iball"></div>
+                <div class="swiper-slide"><img src="../images/clients/20.png" width="105" height="36" alt="FEDERAL BANK"></div>
+                <div class="swiper-slide"><img src="../images/clients/21.png" width="109" height="44" alt="HOTEL ALL SEASON"></div>
+                <div class="swiper-slide"><img src="../images/clients/22-1.png" width="107" height="40" alt="Elite"></div>
               </div>
             </div>
           </div>
           <div class="col-xl-3 col-sm-6">
             <div class="madhus_clients_1">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/clients/36.png" width="109" height="43" alt="ARMC IVF"></div>
-                <div class="swiper-slide"><img src="images/clients/37-1.png" width="107" height="42" alt="Weaves"></div>
-                <div class="swiper-slide"><img src="images/clients/38.png" width="107" height="43" alt="SEEMAS"></div>
-                <div class="swiper-slide"><img src="images/clients/39.png" width="106" height="42" alt="Muthoot Finance"></div>
-                <div class="swiper-slide"><img src="images/clients/40.png" width="109" height="41" alt="MANAPPURAM FINANCE LIMITED"></div>
+                <div class="swiper-slide"><img src="../images/clients/36.png" width="109" height="43" alt="ARMC IVF"></div>
+                <div class="swiper-slide"><img src="../images/clients/37-1.png" width="107" height="42" alt="Weaves"></div>
+                <div class="swiper-slide"><img src="../images/clients/38.png" width="107" height="43" alt="SEEMAS"></div>
+                <div class="swiper-slide"><img src="../images/clients/39.png" width="106" height="42" alt="Muthoot Finance"></div>
+                <div class="swiper-slide"><img src="../images/clients/40.png" width="109" height="41" alt="MANAPPURAM FINANCE LIMITED"></div>
               </div>
             </div>
           </div>
           <div class="col-xl-3 col-sm-6">
             <div class="madhus_clients_1">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/clients/10-1.png" width="106" height="38" alt="Bhima"></div>
-                <div class="swiper-slide"><img src="images/clients/12.png" width="105" height="36" alt="RAMCO"></div>
-                <div class="swiper-slide"><img src="images/clients/13.png" width="105" height="35" alt="KALYAN"></div>
-                <div class="swiper-slide"><img src="images/clients/14-1.png" width="108" height="37" alt="JOSCO Jewellers"></div>
-                <div class="swiper-slide"><img src="images/clients/15-2.png" width="107" height="34" alt="CREATIVE Silks"></div>
-                <div class="swiper-slide"><img src="images/clients/16-1.png" width="109" height="38" alt="HANTEX"></div>
+                <div class="swiper-slide"><img src="../images/clients/10-1.png" width="106" height="38" alt="Bhima"></div>
+                <div class="swiper-slide"><img src="../images/clients/12.png" width="105" height="36" alt="RAMCO"></div>
+                <div class="swiper-slide"><img src="../images/clients/13.png" width="105" height="35" alt="KALYAN"></div>
+                <div class="swiper-slide"><img src="../images/clients/14-1.png" width="108" height="37" alt="JOSCO Jewellers"></div>
+                <div class="swiper-slide"><img src="../images/clients/15-2.png" width="107" height="34" alt="CREATIVE Silks"></div>
+                <div class="swiper-slide"><img src="../images/clients/16-1.png" width="109" height="38" alt="HANTEX"></div>
               </div>
             </div>
           </div>
@@ -187,42 +187,42 @@
           <div class="col-xl-4 col-sm-6">
             <div class="madhus_clients_1">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/clients/17.png" width="109" height="34" alt="MK Fabrics"></div>
-                <div class="swiper-slide"><img src="images/clients/18.png" width="106" height="41" alt="KOLLAM SUPREME"></div>
-                <div class="swiper-slide"><img src="images/clients/19.png" width="107" height="38" alt="iball"></div>
-                <div class="swiper-slide"><img src="images/clients/20.png" width="105" height="36" alt="FEDERAL BANK"></div>
-                <div class="swiper-slide"><img src="images/clients/21.png" width="109" height="44" alt="HOTEL ALL SEASON"></div>
-                <div class="swiper-slide"><img src="images/clients/22-1.png" width="107" height="40" alt="Elite"></div>
+                <div class="swiper-slide"><img src="../images/clients/17.png" width="109" height="34" alt="MK Fabrics"></div>
+                <div class="swiper-slide"><img src="../images/clients/18.png" width="106" height="41" alt="KOLLAM SUPREME"></div>
+                <div class="swiper-slide"><img src="../images/clients/19.png" width="107" height="38" alt="iball"></div>
+                <div class="swiper-slide"><img src="../images/clients/20.png" width="105" height="36" alt="FEDERAL BANK"></div>
+                <div class="swiper-slide"><img src="../images/clients/21.png" width="109" height="44" alt="HOTEL ALL SEASON"></div>
+                <div class="swiper-slide"><img src="../images/clients/22-1.png" width="107" height="40" alt="Elite"></div>
               </div>
             </div>
           </div>
           <div class="col-xl-4  col-sm-6">
             <div class="madhus_clients_1">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/clients/23.png" width="108" height="40" alt="Rotary"></div>
-                <div class="swiper-slide"><img src="images/clients/25.png" width="110" height="41" alt="Malayalam Manorama"></div>
-                <div class="swiper-slide"><img src="images/clients/26-2.png" width="109" height="40" alt="idea"></div>
-                <div class="swiper-slide"><img src="images/clients/27-1.png" width="109" height="38" alt="WEDLAND SILKS & SAREES"></div>
-                <div class="swiper-slide"><img src="images/clients/28.png" width="108" height="42" alt="MVD"></div>
-                <div class="swiper-slide"><img src="images/clients/29.png" width="111" height="42" alt="VStar"></div>
+                <div class="swiper-slide"><img src="../images/clients/23.png" width="108" height="40" alt="Rotary"></div>
+                <div class="swiper-slide"><img src="../images/clients/25.png" width="110" height="41" alt="Malayalam Manorama"></div>
+                <div class="swiper-slide"><img src="../images/clients/26-2.png" width="109" height="40" alt="idea"></div>
+                <div class="swiper-slide"><img src="../images/clients/27-1.png" width="109" height="38" alt="WEDLAND SILKS & SAREES"></div>
+                <div class="swiper-slide"><img src="../images/clients/28.png" width="108" height="42" alt="MVD"></div>
+                <div class="swiper-slide"><img src="../images/clients/29.png" width="111" height="42" alt="VStar"></div>
               </div>
             </div>
           </div>
           <div class="col-xl-4  col-sm-6">
             <div class="madhus_clients_1">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/clients/36.png" width="109" height="43" alt="ARMC IVF"></div>
-                <div class="swiper-slide"><img src="images/clients/37-1.png" width="107" height="42" alt="Weaves"></div>
-                <div class="swiper-slide"><img src="images/clients/38.png" width="107" height="43" alt="SEEMAS"></div>
-                <div class="swiper-slide"><img src="images/clients/39.png" width="106" height="42" alt="Muthoot Finance"></div>
-                <div class="swiper-slide"><img src="images/clients/40.png" width="109" height="41" alt="MANAPPURAM FINANCE LIMITED"></div>
+                <div class="swiper-slide"><img src="../images/clients/36.png" width="109" height="43" alt="ARMC IVF"></div>
+                <div class="swiper-slide"><img src="../images/clients/37-1.png" width="107" height="42" alt="Weaves"></div>
+                <div class="swiper-slide"><img src="../images/clients/38.png" width="107" height="43" alt="SEEMAS"></div>
+                <div class="swiper-slide"><img src="../images/clients/39.png" width="106" height="42" alt="Muthoot Finance"></div>
+                <div class="swiper-slide"><img src="../images/clients/40.png" width="109" height="41" alt="MANAPPURAM FINANCE LIMITED"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-	  <!-- InstanceEndEditable -->
+	  <!-- TemplateEndEditable -->
   </main>
   <footer>
     <div class="madhus_ft_secn1">
@@ -260,12 +260,12 @@
   </footer>
 </div>
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap-4.4.1.js"></script> 
-<!-- InstanceBeginEditable name="Scripts" -->
+<script src="../js/popper.min.js"></script> 
+<script src="../js/bootstrap-4.4.1.js"></script> 
+<!-- TemplateBeginEditable name="Scripts" -->
 <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<!-- InstanceEndEditable -->
-<script src="js/madhusScripts.js"></script>
+<!-- TemplateEndEditable -->
+<script src="../js/madhusScripts.js"></script>
 </body>
-<!-- InstanceEnd --></html>
+</html>
