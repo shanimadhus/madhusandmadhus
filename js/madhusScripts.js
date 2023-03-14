@@ -9,6 +9,7 @@ $(function () {
     once: true
   });
   //Swiper
+	if($(".madhus_clients_1").length > 0){
   const swiper = new Swiper('.madhus_clients_1', {
     // Default parameters
     slidesPerView: 3,
@@ -38,5 +39,19 @@ $(function () {
       //        spaceBetween: 40
       //      }
     }
-  })
+  });
+	}
+	
+  if($(".needs-validation").length > 0){
+	  var forms = document.getElementsByClassName('needs-validation');
+	  var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }
 })
