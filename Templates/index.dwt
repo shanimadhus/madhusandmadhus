@@ -71,7 +71,7 @@
               <h2 class="text-size-2 text-stroke1">Kerala&#8217;s Largest Indoor Outdoor No.1 Advertising Agency</h2>
               <p class="text-shadow2">Newspaper Advertising, Hoardings, Mobile Hoarding, Mobile Display advertising, Mobile Display Roadshow advertising, Sign Board, LED sign boards, LED Wall Mobile Display advertising, Shop Branding, LED Display, Unipole Boards, KSRTC bus panel advertising, Railway &amp; KSRTC advertising, etc.</p>
               <p class="text-shadow2">A Complete Indoor and Outdoor Advertising Solutions for Businesses in Every Industry</p>
-              <p class="text-center"><a href="https://madhusandmadhus.com/gallery/" class="btn">View our works</a></p>
+              <p class="text-center"><a href="#gallery/" class="btn">View our works</a></p>
             </div>
           </div>
         </div>
@@ -229,13 +229,13 @@
       <div class="container">
         <div class="madhus_ft_secn1_1">
           <ul class="d-flex flex-wrap justify-content-center align-items-center">
-            <li><a href="https://madhusandmadhus.com/">Home</a></li>
-            <li><a href="https://madhusandmadhus.com/about-us/">About us</a></li>
-            <li><a href="https://madhusandmadhus.com/services/">Services</a></li>
-            <li><a href="https://madhusandmadhus.com/business-services/">Specifications</a></li>
-            <li><a href="https://madhusandmadhus.com/gallery/">Gallery</a></li>
-            <li><a href="https://madhusandmadhus.com/our-products/">Our Products</a></li>
-            <li><a href="https://madhusandmadhus.com/contact-us/">Contact us</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about-us.html">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Specifications</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Our Products</a></li>
+            <li><a href="#">Contact us</a></li>
           </ul>
         </div>
       </div>
@@ -245,8 +245,8 @@
         <div class="row">
           <div class="col-md-8">
             <div class="madhus_ft_secn2_1">
-              <p style="text-align: center;">| <a href="https://madhusandmadhus.com/privacy-policy/">Privacy Policy</a> |<br>
-                Designed by <em><strong><a href="https://madhusandmadhus.com/" target="_blank">Madhus Advertising</a></strong></em>. All Rights Reserved.</p>
+              <p style="text-align: center;">| <a href="#privacy-policy/">Privacy Policy</a> |<br>
+                Designed by <em><strong><a href="#" target="_blank">Madhus Advertising</a></strong></em>. All Rights Reserved.</p>
             </div>
           </div>
           <div class="col-md-4">
