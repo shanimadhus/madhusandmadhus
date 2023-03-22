@@ -3,7 +3,7 @@ function numscrolls() {
   $(".counter").each(function () {
     $counters = $(this).text();
     $countnum = $counters.replace(",", "");
-    console.log($countnum);
+//    console.log($countnum);
     $(this).easy_number_animate({
       start_value: 0,
       end_value: $countnum,
