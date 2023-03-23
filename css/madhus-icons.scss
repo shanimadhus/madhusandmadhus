@@ -1,0 +1,73 @@
+// Madhus Advertising - Icons - Scss Document
+
+$madhus-Icons_email: "\e900";
+$madhus-Icons_Hoarding: "\e901";
+$madhus-Icons_LED_Display: "\e902";
+$madhus-Icons_mobile: "\e903";
+$madhus-Icons_Mobile_Hoarding: "\e904";
+$madhus-Icons_phone: "\e905";
+$madhus-Icons_whatsapp: "\e906";
+
+@font-face {
+    font-family: 'madhus';
+    src: url("../webfonts/icons/madhus.woff2") format('woff2'),
+        url("../webfonts/icons/madhus.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*="madhus-Icons_"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'madhus' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.madhus-Icons_email {
+  &:before {
+    content: $madhus-Icons_email; 
+  }
+}
+.madhus-Icons_Hoarding {
+  &:before {
+    content: $madhus-Icons_Hoarding; 
+  }
+}
+.madhus-Icons_LED_Display {
+  &:before {
+    content: ""; 
+	background-image: url("../images/icons/Icons_LED_Display_Board.svg");
+	  background-repeat: no-repeat;
+	  display: block;
+	  width: 40px;
+	  height: 41px;
+  }
+}
+.madhus-Icons_mobile {
+  &:before {
+    content: $madhus-Icons_mobile;  
+  }
+}
+.madhus-Icons_Mobile_Hoarding {
+  &:before {
+    content: $madhus-Icons_Mobile_Hoarding; 
+  }
+}
+.madhus-Icons_phone {
+  &:before {
+    content: $madhus-Icons_phone;
+  }
+}
+.madhus-Icons_whatsapp {
+  &:before {
+    content: $madhus-Icons_whatsapp;
+  }
+}
