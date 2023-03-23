@@ -424,6 +424,12 @@ body {
             padding: 60px 0px 0px;
             @include default_docset;
         }
+        &.docset1{
+            .madhus_default {
+                padding: 0px; 
+                @include default_docset;
+            }
+        }
         span.req {
             color: red;
         }
@@ -878,6 +884,11 @@ body {
                 }
             }
         }
+    }
+    
+    //Business Services
+    #madhus_business_services{
+        
     }
 
     //Subheader
