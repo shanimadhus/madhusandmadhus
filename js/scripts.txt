@@ -1,0 +1,22 @@
+  if ($(".madhus_hoardings_photo").length > 0) {
+    $count = 0;
+    $length = $(".madhus_hoardings_photo").length;
+    var offset = [];
+    var reqtarget = [];
+    $(".madhus_hoardings_photo").each(function() {
+      offset.push($(this).offset().top);
+    });
+    $(window).scroll(function () {
+      for (i = 0; i < $length; i++) {
+        $scrolltop = $(document).scrollTop();
+        $targetpos = offset[i];
+        $winht = $(window).height();
+        reqtarget.push($targetpos - $winht);
+        console.log($targetpos, $scrolltop, reqtarget[i]);
+        if ($scrolltop > reqtarget[i]) {
+          $("body").find(".madhus_hoardings_photo").eq(i).addClass("zoomin");
+        }
+      }
+    });
+
+  }

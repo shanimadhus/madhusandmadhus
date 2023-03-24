@@ -36,6 +36,7 @@
     h1,
     h2,
     h3 {
+        letter-spacing: 1px;
         &.basestyle1 {
             font-size: 300%;
             font-weight: 700;
@@ -983,8 +984,12 @@ body {
             text-decoration: none;
             outline: none;
             transition: all 0.2s linear;
-            animation-name: zoom-in;
-            animation-duration: 1.25s;
+            &[data-aos="zoomin"]{
+                &.aos-animate{
+                    animation-name: zoom-in;
+                    animation-duration: 1.25s; 
+                }
+            }
             &:hover, &:focus{
                 background-color: orangered;
             }
@@ -1004,7 +1009,6 @@ body {
             }
         }
     }
-
     //Subheader
     #madhus_subheader {
         text-align: center;
