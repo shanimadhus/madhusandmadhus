@@ -983,6 +983,8 @@ body {
             text-decoration: none;
             outline: none;
             transition: all 0.2s linear;
+            animation-name: zoom-in;
+            animation-duration: 1.25s;
             &:hover, &:focus{
                 background-color: orangered;
             }
@@ -1241,6 +1243,16 @@ body {
         }
         to {
             transform: scaleX(1) rotate(0);
+        }
+    }
+    
+    @keyframes zoom-in{
+        0%{
+            opacity: 0;
+            transform: scale3d(.3,.3,.3);
+        }
+        50%{
+            opacity: 1;
         }
     }
 }
