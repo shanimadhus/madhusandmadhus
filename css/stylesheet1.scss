@@ -274,6 +274,7 @@ body {
         font-family: 'Saira', sans-serif;
         font-size: 150%;
         background: none;
+        padding: 0.5rem 0px;
     }
 
     .navbar-brand {
@@ -493,6 +494,14 @@ body {
         }
         span.req {
             color: red;
+        }
+        [class*="madhus_"]{
+            &[data-aos="zoomin"]{
+                &.aos-animate{
+                    animation-name: zoom-in;
+                    animation-duration: 1.25s; 
+                }
+            }
         }
     }
 
@@ -984,12 +993,6 @@ body {
             text-decoration: none;
             outline: none;
             transition: all 0.2s linear;
-            &[data-aos="zoomin"]{
-                &.aos-animate{
-                    animation-name: zoom-in;
-                    animation-duration: 1.25s; 
-                }
-            }
             &:hover, &:focus{
                 background-color: orangered;
             }
@@ -1009,6 +1012,28 @@ body {
             }
         }
     }
+    
+    //LED Sign Boards
+    #madhus_LED_sign_boards{
+        .madhus_LED_sign_boards_1{
+            padding: 30px 0px;
+        }
+        .madhus_LED_sign_boards_photo{
+            display: block;
+            margin: 30px 0px;
+            &.right{
+                img{
+                    border-radius: 1px 101px 43px 1px;
+                }
+            }
+            &.left{
+                img{
+                    border-radius: 101px 1px 1px 43px;
+                }
+            }
+        }
+    }
+    
     //Subheader
     #madhus_subheader {
         text-align: center;
