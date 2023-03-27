@@ -23,7 +23,7 @@
         font-size: 320%;
         font-weight: 700;
         color: #F26D13;
-        -webkit-text-stroke: 1px #000;
+        -webkit-text-stroke: 0.5px #000;
     }
     
     h3 { 
@@ -1060,22 +1060,34 @@ body {
     #madhus_outdoor_branding{
         .madhus_secn_1{ 
             padding: 15px 0px;
-        } 
-        .madhus_photo{
-            margin: 0px;
-        }
-        @media (max-width: 991px){
-            .madhus_secn_1{
+            @media (max-width: 991px){
                 padding: calc(var(--smscrnp)*15/8) 0px;
             }
-        }
-        @media (max-width: 319px){
-            .madhus_secn_1{
+            @media (max-width: 319px){
                 padding: calc(var(--smscrnp)*15/6) 0px;
             }
         }
+        .madhus_photo{
+            margin: 0px;
+        }
     }
     
+    //Digital Marketing
+    #madhus_digital_marketing{
+        .madhus_secn_1{ 
+            padding: 15px 0px;
+        } 
+        .madhus_photo{
+            margin: 0px;
+            padding-bottom: 30px;
+            @media (max-width: 991px){
+                padding-bottom: calc(var(--smscrnp)*30/8);
+            }
+            @media (max-width: 319px){
+                padding-bottom: calc(var(--smscrnp)*30/6);
+            }
+        }
+    }
     
     //Subheader
     #madhus_subheader {
@@ -1106,7 +1118,7 @@ body {
 			font-size: 300%;
 			font-weight: 600;
 			color: #F26D13;
-			-webkit-text-stroke: 1px rgba(0,0,0,0.22);
+			-webkit-text-stroke: 0.5px rgba(0,0,0,0.22);
 		}
         a.madhus_serv_secn1 {
 			display: block;
