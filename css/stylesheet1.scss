@@ -477,7 +477,6 @@ body {
             margin: 0px calc(var(--smscrnpn)*15/6);
         }
     }
-
     //mains
     main {
         background: #f8f5f4;
@@ -511,9 +510,13 @@ body {
                 }
             }
         }
+        .madhus_secn_1{
+            padding: 30px 0px;
+        }
         .madhus_photo{
             display: block;
             padding: 15px 0px;
+            margin: 30px 0px;
             img{
                 border-radius: 12px;        
             }
@@ -526,6 +529,24 @@ body {
                 img{
                     border-radius: 101px 1px 1px 43px;
                 }
+            }
+        }
+        @media (max-width: 991px){
+            .madhus_secn_1{
+                padding: calc(var(--smscrnp)*30/8) 0px;
+            }
+            .madhus_photo{
+                padding: calc(var(--smscrnp)*15/8) 0px;
+                margin: calc(var(--smscrnp)*30/8) 0px;
+            }
+        }
+        @media (max-width: 319px){
+            .madhus_secn_1{
+                padding: calc(var(--smscrnp)*30/6) 0px;
+            }
+            .madhus_photo{
+                padding: calc(var(--smscrnp)*15/8) 0px;
+                margin: calc(var(--smscrnp)*30/6) 0px;
             }
         }
     }
@@ -1008,12 +1029,10 @@ body {
     
     //Hoarding
     #madhus_hoardings{
-        .madhus_hoardings_1{
-            padding: 30px 0px;
+        .madhus_secn_1{
         }
         a.madhus_photo{
             display: block;
-            margin: 30px 0px;
             padding: 0px;
             border-radius: 20px;
             text-decoration: none;
@@ -1027,33 +1046,31 @@ body {
                 transition: none;
             }
         }
+        
     }
     
     //LED Sign Boards
     #madhus_LED_sign_boards{
-        .madhus_LED_sign_boards_1{
-            padding: 30px 0px;
+        .madhus_secn_1{
         }
         .madhus_photo{
-            margin: 30px 0px;
         }
     }
     
     //Outdoor Printing
     #madhus_outdoor_branding{
-        .madhus_outdoor_branding_1{ 
+        .madhus_secn_1{ 
             padding: 15px 0px;
         } 
         .madhus_photo{
-            padding: 15px 0px;
         }
         @media (max-width: 991px){
-            .madhus_outdoor_branding_1, .madhus_photo{
+            .madhus_secn_1{
                 padding: calc(var(--smscrnp)*15/8) 0px;
             }
         }
         @media (max-width: 319px){
-            .madhus_outdoor_branding_1, .madhus_photo{
+            .madhus_secn_1{
                 padding: calc(var(--smscrnp)*15/6) 0px;
             }
         }
