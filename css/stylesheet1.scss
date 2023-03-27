@@ -160,18 +160,19 @@
 //declare variables
 :root {
     --subhdmt: 120px;
+    --smscrnp: 0.52082vw;
+    --smscrnpn: -0.52082vw;
 }
 
 //body
 body {
     font-family: 'Rubik', sans-serif;
     font-size: 10px;
-    //	min-width: 425px;
     word-wrap: break-word;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    @media (max-width: 424px) {
+    @media (max-width: 991px) {
         font-size: 8px;
     }
 
@@ -1033,6 +1034,53 @@ body {
             }
         }
     }
+    
+    //Outdoor Printing
+    #madhus_outdoor_branding{
+        .madhus_outdoor_branding_1{ 
+            padding: 15px 0px;
+        } 
+        .madhus_outdoor_branding_photo{
+            display: block;
+            padding: 15px 0px;
+            img{
+                border-radius: 12px;        
+            }
+            &.right{
+                img{
+                    border-radius: 1px 101px 43px 1px;
+                }
+            }
+            &.left{
+                img{
+                    border-radius: 101px 1px 1px 43px;
+                }
+            }
+        }
+        @media (max-width: 991px){
+            [class*="col-"]{
+                padding: 0px calc(var(--smscrnp)*15/8);
+            }
+            .madhus_outdoor_branding_1, .madhus_outdoor_branding_photo{
+                padding: calc(var(--smscrnp)*15/8) 0px;
+            }
+            .row{
+                margin: 0px calc(var(--smscrnpn)*15/8);
+            }
+        }
+        @media (max-width: 319px){
+            [class*="col-"]{
+                padding: 0px calc(var(--smscrnp)*15/6);
+            }
+            .madhus_outdoor_branding_1, .madhus_outdoor_branding_photo{
+                padding: calc(var(--smscrnp)*15/6) 0px;
+            }
+            .row{
+                margin: 0px calc(var(--smscrnpn)*15/6);
+            }
+        }
+    }
+    
     
     //Subheader
     #madhus_subheader {
