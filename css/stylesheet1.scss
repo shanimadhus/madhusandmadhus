@@ -1089,6 +1089,32 @@ body {
         }
     }
     
+    //Web and Graphic Design and Development
+    #madhus_Web_Graphic_Design{
+        .madhus_secn_1{ 
+            padding: 30px 0px;
+            h2{
+                text-align: center;
+            }
+            @media (max-width: 991px){
+                padding: calc(var(--smscrnp)*30/8) 0px;
+            }
+            @media (max-width: 319px){
+                padding: calc(var(--smscrnp)*30/6) 0px;
+            }
+        }
+        .madhus_photo{
+            margin: 0px;
+            padding-bottom: 30px;
+            @media (max-width: 991px){
+                padding-bottom: calc(var(--smscrnp)*30/8);
+            }
+            @media (max-width: 319px){
+                padding-bottom: calc(var(--smscrnp)*30/6);
+            }
+        }
+    }
+    
     //Subheader
     #madhus_subheader {
         text-align: center;
