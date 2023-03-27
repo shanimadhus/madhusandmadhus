@@ -510,6 +510,23 @@ body {
                 }
             }
         }
+        .madhus_photo{
+            display: block;
+            padding: 15px 0px;
+            img{
+                border-radius: 12px;        
+            }
+            &.right{
+                img{
+                    border-radius: 1px 101px 43px 1px;
+                }
+            }
+            &.left{
+                img{
+                    border-radius: 101px 1px 1px 43px;
+                }
+            }
+        }
     }
 
     //Carousel
@@ -993,9 +1010,10 @@ body {
         .madhus_hoardings_1{
             padding: 30px 0px;
         }
-        a.madhus_hoardings_photo{
+        a.madhus_photo{
             display: block;
             margin: 30px 0px;
+            padding: 0px;
             border-radius: 20px;
             text-decoration: none;
             outline: none;
@@ -1007,16 +1025,6 @@ body {
                 background-color: #CE3700;
                 transition: none;
             }
-            &.right{
-                img{
-                    border-radius: 101px 1px 6px 43px;
-                }
-            }
-            &.left{
-                img{
-                    border-radius: 1px 101px 43px 6px;
-                }
-            }
         }
     }
     
@@ -1025,19 +1033,8 @@ body {
         .madhus_LED_sign_boards_1{
             padding: 30px 0px;
         }
-        .madhus_LED_sign_boards_photo{
-            display: block;
+        .madhus_photo{
             margin: 30px 0px;
-            &.right{
-                img{
-                    border-radius: 1px 101px 43px 1px;
-                }
-            }
-            &.left{
-                img{
-                    border-radius: 101px 1px 1px 43px;
-                }
-            }
         }
     }
     
@@ -1046,30 +1043,16 @@ body {
         .madhus_outdoor_branding_1{ 
             padding: 15px 0px;
         } 
-        .madhus_outdoor_branding_photo{
-            display: block;
+        .madhus_photo{
             padding: 15px 0px;
-            img{
-                border-radius: 12px;        
-            }
-            &.right{
-                img{
-                    border-radius: 1px 101px 43px 1px;
-                }
-            }
-            &.left{
-                img{
-                    border-radius: 101px 1px 1px 43px;
-                }
-            }
         }
         @media (max-width: 991px){
-            .madhus_outdoor_branding_1, .madhus_outdoor_branding_photo{
+            .madhus_outdoor_branding_1, .madhus_photo{
                 padding: calc(var(--smscrnp)*15/8) 0px;
             }
         }
         @media (max-width: 319px){
-            .madhus_outdoor_branding_1, .madhus_outdoor_branding_photo{
+            .madhus_outdoor_branding_1, .madhus_photo{
                 padding: calc(var(--smscrnp)*15/6) 0px;
             }
         }
