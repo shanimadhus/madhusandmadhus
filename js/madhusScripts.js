@@ -12,6 +12,31 @@ function numscrolls() {
     });
   });
 }
+//fullscreen
+function openFullscreen() {
+  var elem = document.documentElement;
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    /* IE11 */
+    document.msExitFullscreen();
+  }
+}
 
 $(function () {
   $("#madhusbtn1").click(function () {
@@ -55,7 +80,51 @@ $(function () {
       }
     });
   }
+  //Gallery Swiper
+  if ($("#gallery1").length > 0) {
+      const swiper = new Swiper('.swiper', {
+        // Default parameters
+        slidesPerView: 1,
+        spaceBetween: 0,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        loop: true,
+      });
+    $("#gallery1 a.madhus_gallery_2").click(function () {
+        $("#gallery_region1").fadeIn();
+        var indexlength = $(this).index();
+      swiper.slideTo(indexlength+1, 0);
+        return false;
+    });
+      $("#closes").click(function(){
+          $("#gallery_region1").fadeOut();
+      });
+    $("#fullscrn").click(function () {
+      openFullscreen();
+      $(this).toggle();
+      $("#closescrn, #closes, .madhus_pgmargin").toggle();
+    });
+    $("#closescrn").click(function () {
+      closeFullscreen();
+      $(this).toggle();
+      $("#fullscrn, #closes, .madhus_pgmargin").toggle();
+    });
+    document.addEventListener("fullscreenchange", function () {
+      if ((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
 
+      } else {
+        $("#closescrn").css("display", "none");
+        $("#fullscrn, #closes, .madhus_pgmargin").css("display", "block");
+      }
+    });
+  }
+  // client counter
   if ($(".counter").length > 0) {
     $count = 0;
     $(window).scroll(function () {
