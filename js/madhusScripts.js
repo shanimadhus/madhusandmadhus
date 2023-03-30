@@ -103,27 +103,38 @@ $(function () {
         $("#fullscrn, #closes, .madhus_pgmargin").css("display", "block");
       }
     });
-
-//    $("#share").on("click", async () => {
-//      $photourl = $(".swiper-slide.swiper-slide-active img").attr("src");
+//	$(".facebook").click(function(){
+//		var siteurl = window.location.href;
+//		$linkurl = siteurl.substring(0, siteurl.lastIndexOf("/"));
+////		console.log(siteurl, $linkurl);
+//		
+////      $photo = photourl.substr((photourl.lastIndexOf('/') + 1));
+////		console.log($photo.split('.').pop());
+////		console.log($photo.split('.').shift());
+//		$requrl = $linkurl + "/" + $(".swiper-slide.swiper-slide-active img").attr("src");
+//		$photourl = encodeURI($requrl);
+////		alert($photourl);
+//		window.open("https://www.facebook.com/sharer/sharer.php?u="+$photourl, "_blank");		
+//	});
+    $("#share").on("click", async () => {
+      $photourl = $(".swiper-slide.swiper-slide-active img").attr("src");
 //      var photourl = $photourl;
 //      $photo = photourl.substr((photourl.lastIndexOf('/') + 1));
 //      $photoname = $photo.split('.').shift();
 //      $phototype = "image/" + $photo.split('.').pop();
-//      console.log($photoname, $phototype);
-//      $phototitle = $(".swiper-slide.swiper-slide-active img").attr("alt") + " - Madhus Advertising";
+      $phototitle = $(".swiper-slide.swiper-slide-active img").attr("alt") + " - Madhus Advertising";
 //      const file = new File(["foo"], $photourl, {
 //        type: $phototype,
 //      });
-//      try {
-//        await navigator.share({
-//          title: $phototitle,
-//          url: $photourl
-//        });
-//      } catch (err) {
-//        console.error("Share failed:", err.message);
-//      }
-//    });
+      try {
+        await navigator.share({
+          title: $phototitle,
+          url: $photourl
+        });
+      } catch (err) {
+        console.error("Share failed:", err.message);
+      }
+    });
   }
   // client counter
   if ($(".counter").length > 0) {

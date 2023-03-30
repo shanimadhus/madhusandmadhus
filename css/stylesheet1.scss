@@ -202,6 +202,9 @@ body {
         padding: 0px;
         margin: 0px;
         list-style: none;
+		&:active{
+			transition: none;
+		}
     }
 
     img {
@@ -1221,14 +1224,23 @@ body {
                     color: #ffffff;
                     font-size: 200%;
                     display: block;
+                    text-align: center;
                     width: 42px;
                     height: 42px;
                     padding: 0px;
                     margin: 6px;
-                    text-align: center;
+					border-radius: 100%;
+					outline: none;
+					box-shadow: none;
                     [class*="eicon-"]{
                         display: inline-block;
                     }
+					&:hover, &:focus{
+						background-color: orangered;
+					}
+					&:active{
+						box-shadow: inset 3px 3px 3px 0px #D33900;
+					}
                 }
             }
 			.dropdown-menu{
