@@ -50,7 +50,6 @@ $(function () {
   //Swiper
   if ($(".madhus_clients_1").length > 0) {
     const swiper = new Swiper('.madhus_clients_1', {
-      // Default parameters
       slidesPerView: 3,
       spaceBetween: 0,
       autoplay: {
@@ -60,51 +59,32 @@ $(function () {
         waitForTransition: true
       },
       loop: true,
-      // Responsive breakpoints
-      breakpoints: {
-        //      // when window width is >= 320px
-        //      320: {
-        //        slidesPerView: 2,
-        //        spaceBetween: 20
-        //      },
-        //      // when window width is >= 480px
-        //      480: {
-        //        slidesPerView: 3,
-        //        spaceBetween: 30
-        //      },
-        //      // when window width is >= 640px
-        //      640: {
-        //        slidesPerView: 4,
-        //        spaceBetween: 40
-        //      }
-      }
     });
   }
   //Gallery Swiper
   if ($("#gallery1").length > 0) {
-      const swiper = new Swiper('.swiper', {
-        // Default parameters
-        slidesPerView: 1,
-        spaceBetween: 0,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'fraction',
-        },
-        loop: true,
-      });
-    $("#gallery1 a.madhus_gallery_2").click(function () {
-        $("#gallery_region1").fadeIn();
-        var indexlength = $(this).index();
-      swiper.slideTo(indexlength+1, 0);
-        return false;
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      loop: true,
     });
-      $("#closes").click(function(){
-          $("#gallery_region1").fadeOut();
-      });
+    $("#gallery1 a.madhus_gallery_2").click(function () {
+      $("#gallery_region1").fadeIn();
+      var indexlength = $(this).index();
+      swiper.slideTo(indexlength + 1, 0);
+      return false;
+    });
+    $("#closes").click(function () {
+      $("#gallery_region1").fadeOut();
+    });
     $("#fullscrn").click(function () {
       openFullscreen();
       $(this).toggle();
@@ -121,6 +101,38 @@ $(function () {
       } else {
         $("#closescrn").css("display", "none");
         $("#fullscrn, #closes, .madhus_pgmargin").css("display", "block");
+      }
+    });
+//	$(".facebook").click(function(){
+//		var siteurl = window.location.href;
+//		$linkurl = siteurl.substring(0, siteurl.lastIndexOf("/"));
+////		console.log(siteurl, $linkurl);
+//		
+////      $photo = photourl.substr((photourl.lastIndexOf('/') + 1));
+////		console.log($photo.split('.').pop());
+////		console.log($photo.split('.').shift());
+//		$requrl = $linkurl + "/" + $(".swiper-slide.swiper-slide-active img").attr("src");
+//		$photourl = encodeURI($requrl);
+////		alert($photourl);
+//		window.open("https://www.facebook.com/sharer/sharer.php?u="+$photourl, "_blank");		
+//	});
+    $("#share").on("click", async () => {
+      $photourl = $(".swiper-slide.swiper-slide-active img").attr("src");
+//      var photourl = $photourl;
+//      $photo = photourl.substr((photourl.lastIndexOf('/') + 1));
+//      $photoname = $photo.split('.').shift();
+//      $phototype = "image/" + $photo.split('.').pop();
+      $phototitle = $(".swiper-slide.swiper-slide-active img").attr("alt") + " - Madhus Advertising";
+//      const file = new File(["foo"], $photourl, {
+//        type: $phototype,
+//      });
+      try {
+        await navigator.share({
+          title: $phototitle,
+          url: $photourl
+        });
+      } catch (err) {
+        console.error("Share failed:", err.message);
       }
     });
   }

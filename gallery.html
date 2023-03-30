@@ -15,7 +15,7 @@
 <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
 <!-- InstanceEndEditable -->
 <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-<link href="css/stylesheet1.css?v=1.9" rel="stylesheet">
+<link href="css/stylesheet1.css?v=2" rel="stylesheet">
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 </head>
@@ -107,9 +107,21 @@
 <!-- InstanceBeginEditable name="Additional_region" -->
 <div id="gallery_region1">
   <div class="btn-group1 d-flex">
-    <button id="fullscrn" class="btn" title="Fullscreen"><i class="fa fa-window-maximize" aria-hidden="true"></i></button>
-    <button id="closescrn" style="display: none"  class="btn" title="Exit Fullscreen"><i class="fa fa-window-restore" aria-hidden="true"></i></button>
-    <button id="closes" class="btn" title="Close Gallery"><i class="fa fa-close" aria-hidden="true"></i></button>
+    <button id="fullscrn" class="btn" title="Fullscreen"><i class="eicon-frame-expand" aria-hidden="true"></i></button>
+    <button id="closescrn" style="display: none"  class="btn" title="Exit Fullscreen"><i class="eicon-frame-minimize" aria-hidden="true"></i></button>
+	  <button id="share" class="btn" title="Share Photo"><i class="eicon-share-arrow" aria-hidden="true"></i></button>
+	 <!--<div class="dropdown">
+		 <div class="dropdown-menu">
+			 <ul>
+			 	<li><a href="#" class="facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
+			 	<li><a href="#" class="instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
+			 	<li><a href="#" class="twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
+			 	<li><a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+			 	<li><a href="#" class="share"><i class="eicon-share-arrow"></i> Share</a></li>
+			 </ul>
+			 </div>
+		 </div>-->
+    <button id="closes" class="btn" title="Close Gallery"><i class="eicon-close" aria-hidden="true"></i></button>
   </div>
   <div class="d-flex align-items-center h-100">
     <div class="swiper">
@@ -141,6 +153,7 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
       <div class="swiper-scrollbar"></div>
+      <div class="swiper-pagination-current"></div>
     </div>
   </div>
 </div>
