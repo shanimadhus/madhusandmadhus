@@ -5,7 +5,7 @@
     left: 0px;
     top: 0px;
     right: 0px;
-    bottom: 0px;
+    bottom: 0px;  
 }
 
 @mixin default_docset {
@@ -150,6 +150,21 @@
     }
 }
 
+@mixin socialhover($color){
+	color: $color;
+	.fab, [class*="eicon-"]{
+		color: $color;
+	}
+}
+
+@mixin socialactive($color){
+	color: $color;
+	box-shadow: inset 1px 1px 1px 1px $color; 
+	.fab{
+		color: $color;
+	}
+}
+
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;1,200;1,300;1,500;1,800&family=Rubik:wght@400;600;700&display=swap');
 /*icons*/
@@ -289,7 +304,14 @@ body {
             max-width: 94px;
         }
     }
-
+	
+	.dropdown-toggle::after{
+		font-family: 'FontAwesome';
+		font-size: 70%; 
+		content: "\f078"; 
+		border: none;
+	}
+	
     .navbar-collapse {
         flex-grow: 0;
     }
@@ -349,6 +371,9 @@ body {
         }
 
         .navbar-nav {
+			.nav-item{
+				margin: 0px 3px;
+			}
             .nav-item.active .nav-link {
                 background: rgba(28, 27, 27, 0.67);
             }
@@ -357,7 +382,7 @@ body {
                 font-size: 100%;
                 color: #ffffff;
                 background: rgba(28, 27, 27, 0);
-                padding: 4px 30px;
+                padding: 4px 25px;
                 line-height: normal;
                 border-radius: 25px;
                 position: relative;
@@ -377,17 +402,25 @@ body {
 
                 &:hover,
                 &:focus {
+					background-color: orangered;
                     &:before {
                         left: 12px;
                         width: calc(100% - 1.5em);
                         transition: left .3s ease-in-out, width .3s ease-in-out;
                     }
                 }
-
+				
+				&:active{
+					box-shadow: inset 3px 3px 5px 2px #C83600;
+				}
+				
                 &.dropdown-toggle::after {
                     vertical-align: middle;
                 }
 
+                @media (min-width: 1200px) {
+					padding: 4px 30px;
+				}
                 @media (max-width: 991px) {
                     padding: 12px 24px;
                 }
@@ -1181,22 +1214,119 @@ body {
             position: fixed;
             right: 0px;
             top: 0px;
+			z-index: 2;
             button{
                 &.btn{
                     background: none;
                     color: #ffffff;
-                    font-size: 240%;
+                    font-size: 200%;
                     display: block;
                     width: 42px;
                     height: 42px;
                     padding: 0px;
                     margin: 6px;
                     text-align: center;
-                    .fa{
+                    [class*="eicon-"]{
                         display: inline-block;
                     }
                 }
             }
+			.dropdown-menu{
+				padding: 0px;
+				overflow: hidden;
+				border-radius: 5px;
+				&:before {
+				  position: absolute;
+				  top: -7px;
+				  left: 40%;
+				  display: inline-block;
+				  border-right: 7px solid transparent;
+				  border-bottom: 7px solid #ccc;
+				  border-left: 7px solid transparent;
+				  border-bottom-color: #FFFFFF;
+				  content: "";
+				}
+				ul{
+					li{
+						font-size: 100%;
+						font-family: 'Karla',sans-serif;
+						a{
+							font-size: 87.5%;
+							color: #ffffff;
+							display: block;
+							padding: 5px;
+							text-decoration: none;
+							&.facebook{
+								background-color: #4867aa;
+							}
+							&.twitter{
+								background-color: #167BBA;
+							}
+							&.telegram{
+								background-color: #2C79C7;
+							}
+							&.instagram{
+								background-color: #D13F72;
+							}
+							&.whatsapp{
+								background-color: #12803B;
+							}
+							&.share{
+								background-color: #494949;
+							}
+							.fab, [class*="eicon-"]{
+								font-size: 160%;
+								color: #ffffff;
+								display: inline-block;
+								padding: 1px 3px;
+								vertical-align: text-bottom;
+							}
+							&:hover, &:focus{
+								background-color: #ffffff;
+								&.facebook{
+									@include socialhover(#4867aa);
+								}
+								&.twitter{
+									@include socialhover(#167BBA);
+								}
+								&.telegram{
+									@include socialhover(#2C79C7);
+								}
+								&.instagram{
+									@include socialhover(#D13F72);
+								}
+								&.whatsapp{
+									@include socialhover(#12803B);
+								}
+								&.share{
+									@include socialhover(#494949);
+								}
+							}
+							&:active{
+								background-color: #ffffff;
+								&.facebook{
+									@include socialactive(#4867aa);
+								}
+								&.twitter{
+									@include socialactive(#167BBA);
+								}
+								&.telegram{
+									@include socialactive(#2C79C7);
+								}
+								&.instagram{
+									@include socialactive(#D13F72);
+								}
+								&.whatsapp{
+									@include socialactive(#12803B);
+								}
+								&.share{
+									@include socialactive(#494949);
+								}
+							}
+						}
+					}
+				}
+			}
         }
         .swiper-pagination{
             font-size: 150%;
@@ -1213,6 +1343,14 @@ body {
         .swiper-scrollbar{
             display: none;
         }
+		@media(min-width: 991px){
+			.swiper-button-prev, .swiper-rtl .swiper-button-next{
+				left: 10vw
+			}
+			.swiper-button-next, .swiper-rtl .swiper-button-prev{
+				right: 10vw;
+			}
+		}
     }
     
     //Subheader
