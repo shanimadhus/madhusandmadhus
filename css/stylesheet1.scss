@@ -1201,8 +1201,19 @@ body {
         height: 100%;
         z-index: 1;
         user-select: none;
+		.swiper{
+			height: 100%;
+		}
         .swiper-slide{
+			display: flex;
             text-align: center;
+			justify-content: center;
+			align-items: center;
+			&.swiper-slide-zoomed{
+				.madhus_slide{
+					overflow: visible;
+				}
+			}
 			.madhus_slide{
 				display: inline-block;
 				position: relative;
@@ -1222,6 +1233,19 @@ body {
 					padding: 9px;
 					position: absolute;
 					bottom: 0px;
+				}
+				[style*="translate3d"]{
+					.swiper-caption{
+						display: none;
+					}
+				}
+				[style*="translate3d(0px, 0px, 0px)"]{
+					img{
+						transform: scale(1.1)!important;
+					}
+					.swiper-caption{
+						display: block;
+					}
 				}
 			}
         }
