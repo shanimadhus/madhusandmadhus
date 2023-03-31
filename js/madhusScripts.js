@@ -103,19 +103,6 @@ $(function () {
         $("#fullscrn, #closes, .madhus_pgmargin").css("display", "block");
       }
     });
-//	$(".facebook").click(function(){
-//		var siteurl = window.location.href;
-//		$linkurl = siteurl.substring(0, siteurl.lastIndexOf("/"));
-////		console.log(siteurl, $linkurl);
-//		
-////      $photo = photourl.substr((photourl.lastIndexOf('/') + 1));
-////		console.log($photo.split('.').pop());
-////		console.log($photo.split('.').shift());
-//		$requrl = $linkurl + "/" + $(".swiper-slide.swiper-slide-active img").attr("src");
-//		$photourl = encodeURI($requrl);
-////		alert($photourl);
-//		window.open("https://www.facebook.com/sharer/sharer.php?u="+$photourl, "_blank");		
-//	});
     $("#share").on("click", async () => {
       $photourl = $(".swiper-slide.swiper-slide-active img").attr("src");
 //      var photourl = $photourl;
@@ -123,11 +110,13 @@ $(function () {
 //      $photoname = $photo.split('.').shift();
 //      $phototype = "image/" + $photo.split('.').pop();
       $phototitle = $(".swiper-slide.swiper-slide-active img").attr("alt") + " - Madhus Advertising";
+      $phototext = $(".swiper-slide.swiper-slide-active img").attr("alt") + " - Madhus Advertising";
 //      const file = new File(["foo"], $photourl, {
 //        type: $phototype,
 //      });
       try {
         await navigator.share({
+		  text: $phototext,
           title: $phototitle,
           url: $photourl
         });
