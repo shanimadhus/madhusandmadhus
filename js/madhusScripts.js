@@ -118,12 +118,20 @@ $(function () {
         await navigator.share({
 		  text: $phototext,
           title: $phototitle,
-          url: $photourl
+          url: $photourl,
         });
       } catch (err) {
         console.error("Share failed:", err.message);
       }
     });
+	$(".madhus_gallery_2 span img").each(function(){
+		$captions = $(this).attr("alt");
+		$(this).next("span").html($captions);
+	});
+	$(".swiper-slide img").each(function(){
+		$caption = $(this).attr("alt");
+		$(this).next("span").html($caption);
+	});
   }
   // client counter
   if ($(".counter").length > 0) {

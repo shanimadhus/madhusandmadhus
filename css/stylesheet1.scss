@@ -1163,9 +1163,24 @@ body {
                     margin: 3px;
                     border: 1px solid #8a7075;
                     overflow: hidden;
+					position: relative;
                     img{
                         transform: scale(1.1);
                     }
+					.madhus_caption{
+						font-size: 120%;
+						color: #ffffff;
+						text-transform: capitalize;
+						background-color: #db0c2a;
+						position: absolute;
+						display: block;
+						border: none;
+						height: auto;
+						width: 100%;
+						bottom: 0px;
+						margin: 0px;
+						text-align: center;
+					}
                 }
                 @media (max-width: 991px){
                     max-width: 33.3333%;
@@ -1188,6 +1203,27 @@ body {
         user-select: none;
         .swiper-slide{
             text-align: center;
+			.madhus_slide{
+				display: inline-block;
+				position: relative;
+				overflow: hidden;
+				img{
+					transform: scale(1.1);
+				}
+				.swiper-caption{
+					font-size: 240%;
+					line-height: normal;
+					color: #ffffff;
+					text-transform: capitalize;
+					background-color: #db0c2a;
+					display: block;
+					width: 100%;
+					text-align: center;
+					padding: 9px;
+					position: absolute;
+					bottom: 0px;
+				}
+			}
         }
         .swiper-button-next:after, .swiper-button-prev:after{
             font-size: 240%;
