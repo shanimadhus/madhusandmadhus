@@ -150,21 +150,6 @@
     }
 }
 
-@mixin socialhover($color){
-	color: $color;
-	.fab, [class*="eicon-"]{
-		color: $color;
-	}
-}
-
-@mixin socialactive($color){
-	color: $color;
-	box-shadow: inset 1px 1px 1px 1px $color; 
-	.fab{
-		color: $color;
-	}
-}
-
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;1,200;1,300;1,500;1,800&family=Rubik:wght@400;600;700&display=swap');
 /*icons*/
@@ -1243,103 +1228,7 @@ body {
 					}
                 }
             }
-			.dropdown-menu{
-				padding: 0px;
-				overflow: hidden;
-				border-radius: 5px;
-				&:before {
-				  position: absolute;
-				  top: -7px;
-				  left: 40%;
-				  display: inline-block;
-				  border-right: 7px solid transparent;
-				  border-bottom: 7px solid #ccc;
-				  border-left: 7px solid transparent;
-				  border-bottom-color: #FFFFFF;
-				  content: "";
-				}
-				ul{
-					li{
-						font-size: 100%;
-						font-family: 'Karla',sans-serif;
-						a{
-							font-size: 87.5%;
-							color: #ffffff;
-							display: block;
-							padding: 5px;
-							text-decoration: none;
-							&.facebook{
-								background-color: #4867aa;
-							}
-							&.twitter{
-								background-color: #167BBA;
-							}
-							&.telegram{
-								background-color: #2C79C7;
-							}
-							&.instagram{
-								background-color: #D13F72;
-							}
-							&.whatsapp{
-								background-color: #12803B;
-							}
-							&.share{
-								background-color: #494949;
-							}
-							.fab, [class*="eicon-"]{
-								font-size: 160%;
-								color: #ffffff;
-								display: inline-block;
-								padding: 1px 3px;
-								vertical-align: text-bottom;
-							}
-							&:hover, &:focus{
-								background-color: #ffffff;
-								&.facebook{
-									@include socialhover(#4867aa);
-								}
-								&.twitter{
-									@include socialhover(#167BBA);
-								}
-								&.telegram{
-									@include socialhover(#2C79C7);
-								}
-								&.instagram{
-									@include socialhover(#D13F72);
-								}
-								&.whatsapp{
-									@include socialhover(#12803B);
-								}
-								&.share{
-									@include socialhover(#494949);
-								}
-							}
-							&:active{
-								background-color: #ffffff;
-								&.facebook{
-									@include socialactive(#4867aa);
-								}
-								&.twitter{
-									@include socialactive(#167BBA);
-								}
-								&.telegram{
-									@include socialactive(#2C79C7);
-								}
-								&.instagram{
-									@include socialactive(#D13F72);
-								}
-								&.whatsapp{
-									@include socialactive(#12803B);
-								}
-								&.share{
-									@include socialactive(#494949);
-								}
-							}
-						}
-					}
-				}
-			}
-        }
+        } 
         .swiper-pagination{
             font-size: 150%;
             font-weight: normal;
