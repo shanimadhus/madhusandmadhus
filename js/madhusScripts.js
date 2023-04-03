@@ -76,7 +76,7 @@ $(function () {
       },
       loop: true,
       zoom: {
-    maxRatio: 3,
+    maxRatio: 5,
   },
     });
     $("#gallery1 a.madhus_gallery_2").click(function () {
@@ -100,24 +100,21 @@ $(function () {
     });
     //zoom
     $zooms = 0;
-    $(".swiper-zoom-container").dblclick(function () {
-      if ($(".swiper-slide-zoomed").length > 0) {
-        $(".eicon-zoom-in-bold, .eicon-zoom-out-bold").toggle();
-		  $zooms = -1;
-          swiper.zoom.in(5);
-		  swiper.allowTouchMove=false;
-          swiper.allowSlideNext=false;
-		  swiper.allowSlidePrev=false;
-      }
-		else{
-			$(".eicon-zoom-in-bold, .eicon-zoom-out-bold").toggle();
-            swiper.zoom.out(5);
+    $(".swiper-slide").dblclick(function () {
+      if ($(".swiper-slide.swiper-slide-active.swiper-slide-zoomed").length < 1) {
 		  $zooms = 0;
 			swiper.allowTouchMove=true;
             swiper.allowSlideNext=true;
 		  swiper.allowSlidePrev=true;
+      $(".eicon-zoom-in-bold, .eicon-zoom-out-bold, .swiper-button-next, .swiper-button-prev").toggle();
+      }
+		else{
+          $zooms = -1;
+		  swiper.allowTouchMove=false;
+          swiper.allowSlideNext=false;
+		  swiper.allowSlidePrev=false;
+      $(".eicon-zoom-in-bold, .eicon-zoom-out-bold, .swiper-button-next, .swiper-button-prev").toggle();
 		}
-        console.log($zooms);
     });
     $("#zoom").click(function () {
       $zooms++;
@@ -133,8 +130,7 @@ $(function () {
 		  swiper.allowSlidePrev=true;
         $zooms = 0;
       }
-      $(".eicon-zoom-in-bold, .eicon-zoom-out-bold").toggle();
-        console.log($zooms);
+      $(".eicon-zoom-in-bold, .eicon-zoom-out-bold, .swiper-button-next, .swiper-button-prev").toggle();
     });
     document.addEventListener("fullscreenchange", function () {
       if ((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
