@@ -104,25 +104,37 @@ $(function () {
       if ($(".swiper-slide-zoomed").length > 0) {
         $(".eicon-zoom-in-bold, .eicon-zoom-out-bold").toggle();
 		  $zooms = -1;
+          swiper.zoom.in(5);
 		  swiper.allowTouchMove=false;
+          swiper.allowSlideNext=false;
+		  swiper.allowSlidePrev=false;
       }
 		else{
 			$(".eicon-zoom-in-bold, .eicon-zoom-out-bold").toggle();
+            swiper.zoom.out(5);
 		  $zooms = 0;
 			swiper.allowTouchMove=true;
+            swiper.allowSlideNext=true;
+		  swiper.allowSlidePrev=true;
 		}
+        console.log($zooms);
     });
     $("#zoom").click(function () {
       $zooms++;
       if ($zooms == 1) {
-        swiper.zoom.in(3);
+        swiper.zoom.in(5);
 		  swiper.allowTouchMove=false;
+		  swiper.allowSlideNext=false;
+		  swiper.allowSlidePrev=false;
       } else {
-        swiper.zoom.out(3);
+        swiper.zoom.out(5);
 		  swiper.allowTouchMove=true;
+		  swiper.allowSlideNext=true;
+		  swiper.allowSlidePrev=true;
         $zooms = 0;
       }
       $(".eicon-zoom-in-bold, .eicon-zoom-out-bold").toggle();
+        console.log($zooms);
     });
     document.addEventListener("fullscreenchange", function () {
       if ((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
