@@ -1,0 +1,37 @@
+<div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/2-2.jpg" width="693" height="478" alt="Train Branding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/3-2.jpg" width="693" height="478" alt="Roadshow Mobile Van Advertising"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/4-2.jpg" width="693" height="478" alt="LED Video Van Advertising"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/6-1.jpg" width="693" height="478" alt="Shop Board and Custom LED Shop Board"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/7.jpg" width="693" height="478" alt="Outdoor Branding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/9-1.jpg" width="693" height="478" alt="Outdoor Branding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/10-1.jpg" width="693" height="478" alt="Outdoor Branding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/11-1.jpg" width="693" height="478" alt="Outdoor Branding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/12-1.jpg" width="693" height="478" alt="Indoor Branding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/13-1.jpg" width="693" height="478" alt="Railway Station Sign Board"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/14-1.jpg" width="693" height="478" alt="Shop Board"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/15-1.jpg" width="693" height="478" alt="Outdoor Branding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/16-1.jpg" width="693" height="478" alt="Mini Unipole And Hoarding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/17.jpg" width="693" height="478" alt="Mini Unipole And Hoarding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/18.jpg" width="693" height="478" alt="Mini Unipole And Hoarding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/20-1.jpg" width="693" height="478" alt="Mini Unipole And Hoarding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/21-1.jpg" width="693" height="478" alt="Mini Unipole And Hoardings, advertising signboard and billboards"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/22-1.jpg" width="693" height="478" alt="Unipole Hoarding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/23-1.jpg" width="693" height="478" alt="Mini Unipole And Hoarding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/24-1.jpg" width="693" height="478" alt="Mini Unipole And Hoarding"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/26-2.jpg" width="693" height="478" alt="LED Sign Board and Shop Board"><span class="swiper-caption"></span></div></div></div>
+        <div class="swiper-slide"><div class="madhus_slide"><div class="swiper-zoom-container"><img src="images/gallery/photos/hoardings.jpg" width="693" height="478" alt="hoardings, advertising boards and billboards"><span class="swiper-caption"></span></div></div></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-scrollbar"></div>
+	  <div class="btn-group1 d-flex">
+    <button id="fullscrn" class="btn" title="Fullscreen"><i class="eicon-frame-expand" aria-hidden="true"></i></button>
+    <button id="closescrn" style="display: none"  class="btn" title="Exit Fullscreen"><i class="eicon-frame-minimize" aria-hidden="true"></i></button>
+	 <button id="zoom" class="btn" title="Zoom Photo"><i class="eicon-zoom-in-bold" aria-hidden="true"></i><i class="eicon-zoom-out-bold" aria-hidden="true" style="display: none"></i></button>
+	 <button id="share" class="btn" title="Share Photo"><i class="eicon-share-arrow" aria-hidden="true"></i></button>
+    <button id="closes" class="btn" title="Close Gallery"><i class="eicon-close" aria-hidden="true"></i></button>
+  </div>
+    </div>

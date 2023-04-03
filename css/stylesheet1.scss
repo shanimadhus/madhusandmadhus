@@ -1,6 +1,6 @@
 // Madhus and Madhus Scss Document
 //mixins
-@mixin abs {
+@mixin abs { 
     position: absolute;
     left: 0px;
     top: 0px;
@@ -1166,6 +1166,7 @@ body {
 					position: relative;
                     img{
                         transform: scale(1.1);
+						transition: transform 0.3s linear;
                     }
 					.madhus_caption{
 						font-size: 120%;
@@ -1182,6 +1183,21 @@ body {
 						text-align: center;
 					}
                 }
+				&:hover, &:focus{
+					span{
+						img{
+							transform: scale(1.2);
+						}
+					}
+				}
+				&:active{
+					span{
+						img{
+							transform: scale(1.15);
+							transition: none;
+						}
+					}
+				}
                 @media (max-width: 991px){
                     max-width: 33.3333%;
                 }
@@ -1189,7 +1205,64 @@ body {
                     max-width: 50%;
                 }
             }
-        }    
+        } 
+		#gallery2{
+            transition: background 3s;
+			border-radius: 30px 30px 30px 30px;
+			box-shadow: 5px 6px 10px 0px rgba(242.53125, 88.48722855623816, 4.7451766304347816, 0.5) inset;
+            padding: 30px;
+            a.madhus_gallery2_1{
+                display: block;
+                span{
+                    display: block;
+                    margin: 3px;
+                    border: 3px solid #100F0F;
+                    overflow: hidden;
+					position: relative;
+                    img{
+                        transform: scale(1.1);
+						transition: transform 0.3s linear; 
+                    }
+					.madhus_caption{
+						font-size: 120%;
+						color: #ffffff;
+						text-transform: capitalize;
+						background-color: #100F0F;
+						position: absolute;
+						display: block;
+						border: none;
+						height: auto;
+						width: 100%;
+						bottom: 0px;
+						margin: 0px;
+						text-align: center;
+					}
+                }
+				&:hover, &:focus{
+					span{
+						border-color: rgba(242,82,9,0.61);
+						img{
+							transform: scale(1.2);
+						}
+					}
+				}
+				&:active{
+					span{
+						border-color: rgba(147,49,5,0.61);
+						img{
+							transform: scale(1.15);
+							transition: none;
+						}
+					}
+				}
+                @media (max-width: 991px){
+                    max-width: 33.3333%;
+                }
+                @media (max-width: 567px){
+                    max-width: 50%;
+                }
+            }
+        }
     }
     #gallery_region1{
         background-color: rgba(0,0,0,.8);
@@ -1218,8 +1291,10 @@ body {
 				display: inline-block;
 				position: relative;
 				overflow: hidden;
+				z-index: 0;
 				img{
-					transform: scale(1.1);
+					max-height: 75vh;
+					width: auto;
 				}
 				.swiper-caption{
 					font-size: 240%;
@@ -1241,7 +1316,7 @@ body {
 				}
 				[style*="translate3d(0px, 0px, 0px)"]{
 					img{
-						transform: scale(1.1)!important;
+//						transform: scale(1.1)!important;
 					}
 					.swiper-caption{
 						display: block;
@@ -1249,6 +1324,9 @@ body {
 				}
 			}
         }
+		[class*="swiper-button-"]{
+			z-index: 1;
+		}
         .swiper-button-next:after, .swiper-button-prev:after{
             font-size: 240%;
             font-weight: bold;

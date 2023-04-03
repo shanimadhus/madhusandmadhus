@@ -1,0 +1,103 @@
+<div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="madhus_slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gallery2/hoarding-Mobile-Sizes.jpg" width="1599" height="1131" alt="Mobile Roadshow Hoarding Sizes">
+                    <span class="swiper-caption"></span>
+                </div>
+            </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="madhus_slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gallery2/hoarding-Sizes.jpg" width="1599" height="1131" alt="Roadshow Mobile Hoarding Sizes">
+                    <span class="swiper-caption"></span>
+                </div>
+            </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="madhus_slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gallery2/LED_Van_Roadshow_display_sizes.jpeg" width="1599" height="1131" alt="LED Van Roadshow display sizes">
+                    <span class="swiper-caption"></span>
+                </div>
+            </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="madhus_slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gallery2/Mobile_Hoarding_Branding_Roadshow_Sizes.jpeg" width="1599" height="1131" alt="Mobile Hoarding Branding Roadshow Sizes">
+                    <span class="swiper-caption"></span>
+                </div>
+            </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="madhus_slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gallery2/Mobile_Hoarding_Roadshow.jpeg" width="1472" height="864" alt="Mobile Hoarding Roadshow">
+                    <span class="swiper-caption"></span>
+                </div>
+            </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="madhus_slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gallery2/Mobile_Hoarding_Roadshow_and_marketing_campaign_sizes.jpeg" width="1599" height="1131" alt="Mobile Hoarding Roadshow and marketing campaign with sizes">
+                    <span class="swiper-caption"></span>
+                </div>
+            </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="madhus_slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gallery2/Mobile_Hoarding_Roadshow_Sizes_Dimensions.jpeg" width="1152" height="532" alt="Mobile Hoarding Roadshow sizes and dimensions">
+                    <span class="swiper-caption"></span>
+                </div>
+            </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="madhus_slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gallery2/Mobile_LED_VAN_Roadshow_display_sizes.jpeg" width="1599" height="1131" alt="Mobile LED VAN Roadshow display sizes">
+                    <span class="swiper-caption"></span>
+                </div>
+            </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="madhus_slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gallery2/Mobile-hoarding-Sizes.jpg" width="1599" height="1131" alt="Mobile Hoarding Sizes">
+                    <span class="swiper-caption"></span>
+                </div>
+            </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="madhus_slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gallery2/Roadshow_Mobile_Hoarding.jpeg" width="1500" height="1125" alt="Roadshow Mobile Hoarding">
+                    <span class="swiper-caption"></span>
+                </div>
+            </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="madhus_slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gallery2/Van_Hoarding_Branding_Roadshow.jpeg" width="1600" height="756" alt="Van Hoarding Branding Roadshow">
+                    <span class="swiper-caption"></span>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-scrollbar"></div>
+	  <div class="btn-group1 d-flex">
+    <button id="fullscrn" class="btn" title="Fullscreen"><i class="eicon-frame-expand" aria-hidden="true"></i></button>
+    <button id="closescrn" style="display: none"  class="btn" title="Exit Fullscreen"><i class="eicon-frame-minimize" aria-hidden="true"></i></button>
+	 <button id="zoom" class="btn" title="Zoom Photo"><i class="eicon-zoom-in-bold" aria-hidden="true"></i><i class="eicon-zoom-out-bold" aria-hidden="true" style="display: none"></i></button>
+	 <button id="share" class="btn" title="Share Photo"><i class="eicon-share-arrow" aria-hidden="true"></i></button>
+    <button id="closes" class="btn" title="Close Gallery"><i class="eicon-close" aria-hidden="true"></i></button>
+  </div>
+    </div>
