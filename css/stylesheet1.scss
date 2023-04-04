@@ -1217,11 +1217,13 @@ body {
         #gallery1 {
             border: double;
             padding: 12px;
-
+            user-select: none;
             a.madhus_gallery_2 {
                 display: block;
                 max-width: 25%;
-
+                &:hover, &:focus, &:active{
+                    outline: none;
+                }
                 span {
                     display: block;
                     margin: 3px;
@@ -1282,10 +1284,19 @@ body {
             border-radius: 30px 30px 30px 30px;
             box-shadow: 5px 6px 10px 0px rgba(242.53125, 88.48722855623816, 4.7451766304347816, 0.5) inset;
             padding: 30px;
-
+            border-color: #f8f5f4;
+            border-style: double;
+            pointer-events: none;
+            user-select: none;
+            &:hover{
+                background-color: rgba(242, 82, 9, 0.61);
+                border-style: double;
+                box-shadow: 1px 0px 11px 4px rgba(0,0,0,0.5) inset;
+                transition: background 3s;
+            }
             a.madhus_gallery2_1 {
                 display: block;
-
+                outline: none;
                 span {
                     display: block;
                     margin: 3px;
@@ -1313,7 +1324,7 @@ body {
                         text-align: center;
                     }
                 }
-
+                pointer-events: auto;
                 &:hover,
                 &:focus {
                     span {
@@ -1342,6 +1353,70 @@ body {
 
                 @media (max-width: 567px) {
                     max-width: 50%;
+                }
+            }
+        }
+        
+        #gallery3{
+            padding: 30px 4px 6px;
+            box-shadow: 0px 0px 10px 0px rgba(243,88,5,0.5) inset;
+            border-radius: 25px;
+            overflow: hidden;
+            .swiper {
+                width: 100%;
+                user-select: none;
+                .swiper-slide {
+                    background-position: center;
+                    background-size: cover;
+                    width: 450px;
+                    height: auto;
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                    @media (max-width: 767px){
+                        width: 60vw;
+                    }
+                    .madhus_caption{
+                        font-size: 10px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        display: block;
+                        background-color: #edebeb;
+                        text-align: center;
+                        padding: 3px 5px;
+                    }
+                }
+                &.swiper-3d {
+                    .swiper-slide-shadow-right {
+                        background-image: linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0));
+                    }
+                    .swiper-slide-shadow-left {
+                        background-image: linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0));
+                    }
+                }
+                .btn{
+                    font-size: 240%;
+                    font-weight: bold;
+                    color: #ffffff;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 1;
+                    box-shadow: none;
+                    &#swiper-button-prev{
+                        left: 0px;
+                    }
+                    &#swiper-button-next{
+                        right: 0px;
+                    }
+                    &:hover, &:focus{
+                        box-shadow: 1px 1px 5px rgba(170,61,3,0.72);
+                    }
+                    &:active{
+                        background-color: rgba(170,61,3,0.32);
+                        box-shadow: inset 0 0 5px 2px rgba(170,61,3,0.72);
+                    }
                 }
             }
         }

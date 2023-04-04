@@ -42,13 +42,13 @@ function photoslide(obj1, obj2, obj3) {
   const swiper = new Swiper(obj1, {
     slidesPerView: 1,
     spaceBetween: 0,
-      autoplay: false,
+    autoplay: false,
     navigation: {
-      nextEl: ' .swiper-button-next',
-      prevEl: ' .swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     pagination: {
-      el: ' .swiper-pagination',
+      el: ".swiper-pagination",
       type: 'fraction',
     },
     loop: true,
@@ -93,7 +93,7 @@ function photoslide(obj1, obj2, obj3) {
   $(".swiper-slide img").each(function () {
     $(this).attr("title", "Double Click to Zoom in and out.");
     $caption = $(this).attr("alt");
-    $(this).next("span").html($caption);
+    $(this).next("span.swiper-caption").html($caption);
   });
   $("#closes").click(function () {
     $("#gallery_region1").fadeOut();
@@ -121,15 +121,8 @@ function photoslide(obj1, obj2, obj3) {
 
   $("#share").on("click", async () => {
     $photourl = $(".swiper-slide.swiper-slide-active img").attr("src");
-    //      var photourl = $photourl;
-    //      $photo = photourl.substr((photourl.lastIndexOf('/') + 1));
-    //      $photoname = $photo.split('.').shift();
-    //      $phototype = "image/" + $photo.split('.').pop();
     $phototitle = $(".swiper-slide.swiper-slide-active img").attr("alt") + " - Madhus Advertising";
     $phototext = $(".swiper-slide.swiper-slide-active img").attr("alt") + " - Madhus Advertising";
-    //      const file = new File(["foo"], $photourl, {
-    //        type: $phototype,
-    //      });
     try {
       await navigator.share({
         text: $phototext,
@@ -199,13 +192,36 @@ $(function () {
       return false;
     });
 
-
-    $(".madhus_gallery_2 span img, .madhus_gallery2_1 span img").each(function () {
+    $(".madhus_gallery_2 span img, .madhus_gallery2_1 span img, #gallery3 .swiper-slide img").each(function () {
       $captions = $(this).attr("alt");
-      $(this).next("span").html($captions);
+      $(this).next("span.madhus_caption").html($captions);
     });
 
   }
+  if ($("#gallery3").length > 0) {
+    var styleswiper = new Swiper("#gallery3 .swiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+        autoplay: false,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true,
+      loopedSlides: 3,
+      pagination: false,
+      navigation: {
+        nextEl: "#swiper-button-next",
+        prevEl: "#swiper-button-prev",
+      }
+    });
+  }
+
   // client counter
   if ($(".counter").length > 0) {
     $count = 0;
