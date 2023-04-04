@@ -42,6 +42,7 @@ function photoslide(obj1, obj2, obj3) {
   const swiper = new Swiper(obj1, {
     slidesPerView: 1,
     spaceBetween: 0,
+      autoplay: false,
     navigation: {
       nextEl: ' .swiper-button-next',
       prevEl: ' .swiper-button-prev',
