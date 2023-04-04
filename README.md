@@ -2,7 +2,7 @@
 ADVERTISING AGENCY KOLLAM - MADHUS ADVERTISING AGENCY
 
 MADHUS & MADHUS
-No.1 ADVERTISING AGENCY​
+No.1 ADVERTISING AGENCY
 You Innovate We Communicate
 
 Kerala's Largest Indoor Outdoor No.1 Advertising Agency
