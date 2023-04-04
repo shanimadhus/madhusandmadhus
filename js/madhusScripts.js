@@ -38,6 +38,109 @@ function closeFullscreen() {
   }
 }
 
+function photoslide(obj1, obj2, obj3) {
+  const swiper = new Swiper(obj1, {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ' .swiper-button-next',
+      prevEl: ' .swiper-button-prev',
+    },
+    pagination: {
+      el: ' .swiper-pagination',
+      type: 'fraction',
+    },
+    loop: true,
+    zoom: {
+      maxRatio: 5,
+    },
+  });
+  swiper.slideTo(obj2 + 1, 0);
+  //zoom
+  $zooms = obj3;
+  $(".swiper-slide").dblclick(function () {
+    if ($(".swiper-slide.swiper-slide-active.swiper-slide-zoomed").length < 1) {
+      $zooms = 0;
+      swiper.allowTouchMove = true;
+      swiper.allowSlideNext = true;
+      swiper.allowSlidePrev = true;
+      $(".eicon-zoom-in-bold, .eicon-zoom-out-bold, .swiper-button-next, .swiper-button-prev").toggle();
+    } else {
+      $zooms = -1;
+      swiper.allowTouchMove = false;
+      swiper.allowSlideNext = false;
+      swiper.allowSlidePrev = false;
+      $(".eicon-zoom-in-bold, .eicon-zoom-out-bold, .swiper-button-next, .swiper-button-prev").toggle();
+    }
+  });
+  $("#zoom").click(function () {
+    $zooms++;
+    if ($zooms == 1) {
+      swiper.zoom.in(5);
+      swiper.allowTouchMove = false;
+      swiper.allowSlideNext = false;
+      swiper.allowSlidePrev = false;
+    } else {
+      swiper.zoom.out();
+      swiper.allowTouchMove = true;
+      swiper.allowSlideNext = true;
+      swiper.allowSlidePrev = true;
+      $zooms = 0;
+    }
+    $(".eicon-zoom-in-bold, .eicon-zoom-out-bold, .swiper-button-next, .swiper-button-prev").toggle();
+  });
+  $(".swiper-slide img").each(function () {
+    $(this).attr("title", "Double Click to Zoom in and out.");
+    $caption = $(this).attr("alt");
+    $(this).next("span").html($caption);
+  });
+  $("#closes").click(function () {
+    $("#gallery_region1").fadeOut();
+    //		swiper.destroy(true, false);
+  });
+  document.addEventListener("fullscreenchange", function () {
+    if ((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
+
+    } else {
+      $("#closescrn").css("display", "none");
+      $("#fullscrn, #closes, .madhus_pgmargin").css("display", "block");
+    }
+  });
+  $("#fullscrn").click(function () {
+    openFullscreen();
+    $(this).toggle();
+    $("#closescrn, #closes, .madhus_pgmargin").toggle();
+  });
+  $("#closescrn").click(function () {
+    closeFullscreen();
+    $(this).toggle();
+    $("#fullscrn, #closes, .madhus_pgmargin").toggle();
+  });
+
+
+  $("#share").on("click", async () => {
+    $photourl = $(".swiper-slide.swiper-slide-active img").attr("src");
+    //      var photourl = $photourl;
+    //      $photo = photourl.substr((photourl.lastIndexOf('/') + 1));
+    //      $photoname = $photo.split('.').shift();
+    //      $phototype = "image/" + $photo.split('.').pop();
+    $phototitle = $(".swiper-slide.swiper-slide-active img").attr("alt") + " - Madhus Advertising";
+    $phototext = $(".swiper-slide.swiper-slide-active img").attr("alt") + " - Madhus Advertising";
+    //      const file = new File(["foo"], $photourl, {
+    //        type: $phototype,
+    //      });
+    try {
+      await navigator.share({
+        text: $phototext,
+        title: $phototitle,
+        url: $photourl,
+      });
+    } catch (err) {
+      console.error("Share failed:", err.message);
+    }
+  });
+}
+
 $(function () {
   $("#madhusbtn1").click(function () {
     $("header").toggleClass("madhusgrey");
@@ -63,113 +166,44 @@ $(function () {
   }
   //Gallery Swiper
   if ($("#gallery1").length > 0) {
-    const swiper = new Swiper('.swiper', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-      },
-      loop: true,
-      zoom: {
-    maxRatio: 5,
-  },
-    });
+
     $("#gallery1 a.madhus_gallery_2").click(function () {
       $("#gallery_region1").fadeIn();
-      var indexlength = $(this).index();
-      swiper.slideTo(indexlength + 1, 0);
+      $ob1 = "#gallery_region1_1 .swiper";
+      $ob2 = $(this).index();
+      $ob3 = 0;
+      $.ajax({
+        url: "gallery_1.txt",
+        dataType: "html",
+        success: function (data) {
+          $("#gallery_region1_1").html(data);
+          photoslide($ob1, $ob2, $ob3);
+        }
+      });
       return false;
     });
-    $("#closes").click(function () {
-      $("#gallery_region1").fadeOut();
+    $("#gallery2 a.madhus_gallery2_1").click(function () {
+      $("#gallery_region1").fadeIn();
+      $ob1 = "#gallery_region1_1 .swiper";
+      $ob2 = $(this).index();
+      $ob3 = 0;
+      $.ajax({
+        url: "gallery_2.txt",
+        dataType: "html",
+        success: function (data) {
+          $("#gallery_region1_1").html(data);
+          photoslide($ob1, $ob2, $ob3);
+        }
+      });
+      return false;
     });
-    $("#fullscrn").click(function () {
-      openFullscreen();
-      $(this).toggle();
-      $("#closescrn, #closes, .madhus_pgmargin").toggle();
-    });
-    $("#closescrn").click(function () {
-      closeFullscreen();
-      $(this).toggle();
-      $("#fullscrn, #closes, .madhus_pgmargin").toggle();
-    });
-    //zoom
-    $zooms = 0;
-    $(".swiper-slide").dblclick(function () {
-      if ($(".swiper-slide.swiper-slide-active.swiper-slide-zoomed").length < 1) {
-		  $zooms = 0;
-			swiper.allowTouchMove=true;
-            swiper.allowSlideNext=true;
-		  swiper.allowSlidePrev=true;
-      $(".eicon-zoom-in-bold, .eicon-zoom-out-bold, .swiper-button-next, .swiper-button-prev").toggle();
-      }
-		else{
-          $zooms = -1;
-		  swiper.allowTouchMove=false;
-          swiper.allowSlideNext=false;
-		  swiper.allowSlidePrev=false;
-      $(".eicon-zoom-in-bold, .eicon-zoom-out-bold, .swiper-button-next, .swiper-button-prev").toggle();
-		}
-    });
-    $("#zoom").click(function () {
-      $zooms++;
-      if ($zooms == 1) {
-        swiper.zoom.in(5);
-		  swiper.allowTouchMove=false;
-		  swiper.allowSlideNext=false;
-		  swiper.allowSlidePrev=false;
-      } else {
-        swiper.zoom.out(5);
-		  swiper.allowTouchMove=true;
-		  swiper.allowSlideNext=true;
-		  swiper.allowSlidePrev=true;
-        $zooms = 0;
-      }
-      $(".eicon-zoom-in-bold, .eicon-zoom-out-bold, .swiper-button-next, .swiper-button-prev").toggle();
-    });
-    document.addEventListener("fullscreenchange", function () {
-      if ((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
 
-      } else {
-        $("#closescrn").css("display", "none");
-        $("#fullscrn, #closes, .madhus_pgmargin").css("display", "block");
-      }
-    });
-    $("#share").on("click", async () => {
-      $photourl = $(".swiper-slide.swiper-slide-active img").attr("src");
-      //      var photourl = $photourl;
-      //      $photo = photourl.substr((photourl.lastIndexOf('/') + 1));
-      //      $photoname = $photo.split('.').shift();
-      //      $phototype = "image/" + $photo.split('.').pop();
-      $phototitle = $(".swiper-slide.swiper-slide-active img").attr("alt") + " - Madhus Advertising";
-      $phototext = $(".swiper-slide.swiper-slide-active img").attr("alt") + " - Madhus Advertising";
-      //      const file = new File(["foo"], $photourl, {
-      //        type: $phototype,
-      //      });
-      try {
-        await navigator.share({
-          text: $phototext,
-          title: $phototitle,
-          url: $photourl,
-        });
-      } catch (err) {
-        console.error("Share failed:", err.message);
-      }
-    });
-    $(".madhus_gallery_2 span img").each(function () {
+
+    $(".madhus_gallery_2 span img, .madhus_gallery2_1 span img").each(function () {
       $captions = $(this).attr("alt");
       $(this).next("span").html($captions);
     });
-    $(".swiper-slide img").each(function () {
-	  $(this).attr("title", "Double Click to Zoom in and out.");
-      $caption = $(this).attr("alt");
-      $(this).next("span").html($caption);
-    });
+
   }
   // client counter
   if ($(".counter").length > 0) {
