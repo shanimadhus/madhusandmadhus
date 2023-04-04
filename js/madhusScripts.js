@@ -126,22 +126,6 @@ $(function () {
   }
   //Gallery Swiper
   if ($("#gallery1").length > 0) {
-//    const swiper = new Swiper('.swiper', {
-//      slidesPerView: 1,
-//      spaceBetween: 0,
-//      navigation: {
-//        nextEl: '.swiper-button-next',
-//        prevEl: '.swiper-button-prev',
-//      },
-//      pagination: {
-//        el: '.swiper-pagination',
-//        type: 'fraction',
-//      },
-//      loop: true,
-//      zoom: {
-//		maxRatio: 3,
-//	  },
-//    });
 	  
     $("#gallery1 a.madhus_gallery_2").click(function () {
       $("#gallery_region1").fadeIn();
@@ -214,7 +198,7 @@ $(function () {
         console.error("Share failed:", err.message);
       }
     });
-    $(".madhus_gallery_2 span img").each(function () {
+    $(".madhus_gallery_2 span img, .madhus_gallery2_1 span img").each(function () {
       $captions = $(this).attr("alt");
       $(this).next("span").html($captions);
     });
