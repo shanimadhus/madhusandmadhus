@@ -178,13 +178,21 @@ body {
     word-wrap: break-word;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
+	.swiper{
+		font-size: 10px;
+	}
     @media (max-width: 991px) {
         font-size: 8px;
+		.swiper{
+			font-size: 8px;
+		}
     }
 
     @media (max-width: 319px) {
         font-size: 6px;
+		.swiper{
+			font-size: 6px;
+		}
     }
 
     * {
@@ -1577,6 +1585,97 @@ body {
             }
         }
     }
+	
+	//Products
+	#madhus_products{
+		padding-bottom: 60px;
+		.swiper-slide{
+			.madhus_products_1{
+				user-select: none;
+				.product-photo{
+					display: block;
+					padding: 12px 6px;
+					img{
+						border: 3px double #f26d13;
+					}
+					.product-caption{
+						font-size: 140%;
+						display: block;
+						padding: 0px;
+						box-shadow: 0px 3px 2px 0px #f26d13;
+						ul{
+							font-size: 100%;
+							display: block;
+							padding: 12px;
+							margin: 0px;
+							li{
+								font-size: 100%;
+								padding: 0px 0px 0px 19px;
+								margin: 0px;
+								line-height: normal;
+								position: relative;
+								list-style: none;
+								&:before{
+									font-family: eicons;
+									content: "\e910";
+									font-weight: 400;
+									position: absolute;
+									right: 95%;
+									top: 1px;
+								}
+								ul{
+									font-size: 92.8568%;
+									border-bottom: none;
+									margin-bottom: 0px;
+									padding: 0px;
+									ul{
+										font-size: 100%;
+									}
+								}
+							}
+							+ p{
+								margin: 0px;
+								padding: 7px 0px 0px;
+								border-top: 3px solid #cccccc;
+							}
+						}
+						p{
+							font-size: 100%;
+							&.note{
+								color: #ef2229;
+								font-size: 90%;
+								font-style: italic;
+								padding: 7px 13px;
+							}
+						}
+						@media (max-width: 991px) {
+							ul{
+								padding: calc(1.2px * 8);
+								li{
+									padding: 0px 0px 0px calc(1.9px * 8);
+									&:before{
+										top: calc(0.1px * 8);
+									}
+								}
+							}
+						}
+
+						@media (max-width: 319px) {
+							ul{
+								padding: calc(1.2px * 6);
+								li{
+									padding: 0px 0px 0px calc(1.9px * 6);
+									&:before{
+										top: calc(0.1px * 6);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
     //Subheader
     #madhus_subheader {
@@ -1589,6 +1688,11 @@ body {
             font-weight: 700;
             color: #ffffff;
         }
+		@media (max-width: 374px){
+			h1{
+				font-size: 375%;
+			}
+		}
     }
 
     //Document setting 1

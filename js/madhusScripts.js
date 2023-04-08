@@ -204,7 +204,7 @@ $(function () {
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: "auto",
-        autoplay: false,
+      autoplay: false,
       coverflowEffect: {
         rotate: 50,
         stretch: 0,
@@ -222,6 +222,27 @@ $(function () {
     });
   }
 
+  //Products
+  if ($("#madhus_products").length > 0) {
+    var swiper = new Swiper(".swiper", {
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
+        480: {
+          slidesPerView: 2,
+        },
+        375: {
+          slidesPerView: 1,
+        }
+      }
+    });
+  }
   // client counter
   if ($(".counter").length > 0) {
     $count = 0;
