@@ -1596,6 +1596,10 @@ body {
 		padding-bottom: 60px;
 		.swiper{
 			padding: 0px 20px;
+			z-index: auto;
+		}
+		.swiper-wrapper{
+			z-index: auto;
 		}
 		.swiper-pagination{
 			position: static;
@@ -1711,8 +1715,10 @@ body {
 			}
 		}
 		.swiper-button-prev, .swiper-button-next{
+			display: block;
 			outline: none;
 			border: 3px double #f49759;
+			z-index: 2;
 			&:after{
 				color: orangered;
 				font-size: 160%;
