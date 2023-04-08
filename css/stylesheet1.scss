@@ -540,6 +540,7 @@ body {
 		opacity: 0;
 		&.show{
 			opacity: 1;
+			transition: opacity 0.7s linear;
 		}
     }
 
@@ -1593,6 +1594,23 @@ body {
 	//Products
 	#madhus_products{
 		padding-bottom: 60px;
+		.swiper{
+			padding: 0px 20px;
+		}
+		.swiper-pagination{
+			position: static;
+			display: block;
+			padding: 12px 6px;
+			.swiper-pagination-bullet{
+				width: 20px;
+				height: 10px;
+				border-radius: 0;
+				margin: 4px;
+				&.swiper-pagination-bullet-active{
+					background: orangered;
+				}
+			}
+		}
 		.swiper-slide{
 			.madhus_products_1{
 				user-select: none;
@@ -1603,7 +1621,7 @@ body {
 						border: 3px double #f26d13;
 					}
 					.product-caption{
-						font-size: 140%;
+						font-size: 143%;
 						display: block;
 						padding: 0px;
 						box-shadow: 0px 3px 2px 0px #f26d13;
@@ -1645,6 +1663,7 @@ body {
 						}
 						p{
 							font-size: 100%;
+							line-height: normal;
 							&.note{
 								color: #ef2229;
 								font-size: 90%;
@@ -1677,6 +1696,30 @@ body {
 						}
 					}
 				}
+			}
+		}
+		.swiper-button-prev{
+			left: 0px;
+			&:active{
+				box-shadow: inset 1px 1px 3px 1px #F6BF9A;
+			}
+		}
+		.swiper-button-next{
+			right: 0px;
+			&:active{
+				box-shadow: inset -1px 1px 3px 1px #F6BF9A;
+			}
+		}
+		.swiper-button-prev, .swiper-button-next{
+			outline: none;
+			border: 3px double #f49759;
+			&:after{
+				color: orangered;
+				font-size: 160%;
+				font-weight: bolder;
+			}
+			&:hover, &:focus{
+				background-color: #FBE4D5;
 			}
 		}
 	}

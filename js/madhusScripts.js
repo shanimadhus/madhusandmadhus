@@ -226,7 +226,11 @@ $(function () {
   //Products
   if ($("#madhus_products").length > 0) {
     var swiper = new Swiper(".swiper", {
-      spaceBetween: 30,
+      spaceBetween: 21,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
