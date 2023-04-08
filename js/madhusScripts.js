@@ -136,6 +136,7 @@ function photoslide(obj1, obj2, obj3) {
 }
 
 $(function () {
+  $("main").addClass("show");
   $("#madhusbtn1").click(function () {
     $("header").toggleClass("madhusgrey");
   });
