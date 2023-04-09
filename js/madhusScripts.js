@@ -226,7 +226,7 @@ $(function () {
   //Products
   if ($("#madhus_products").length > 0) {
     var swiper = new Swiper(".swiper", {
-      spaceBetween: 21,
+      spaceBetween: 20,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

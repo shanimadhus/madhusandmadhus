@@ -1595,23 +1595,46 @@ body {
 	#madhus_products{
 		padding-bottom: 60px;
 		.swiper{
-			padding: 0px 20px;
-			z-index: auto;
+			padding: 20px;
+			z-index: 0;
+			background-image: linear-gradient(120deg, #ff7a3d 0%, #000 100%);
+			border-radius: 25px;
+			border: 3px double #cccccc;
+			&:before{
+				content: "";
+				background-image: url("../images/products/pattern1.png");
+				background-repeat: repeat;
+				background-attachment: fixed;
+				display: block;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+				opacity: 0.5;
+			}
+			
 		}
 		.swiper-wrapper{
-			z-index: auto;
+			z-index: 2;
 		}
 		.swiper-pagination{
-			position: static;
+			position: relative;
 			display: block;
 			padding: 12px 6px;
+			z-index: 3;
 			.swiper-pagination-bullet{
 				width: 20px;
 				height: 10px;
 				border-radius: 0;
 				margin: 4px;
+				background: #32160b;
+				outline: 1px solid #b96351;
+				opacity: 0.5;
 				&.swiper-pagination-bullet-active{
 					background: orangered;
+					opacity: 1;
 				}
 			}
 		}
@@ -1626,6 +1649,7 @@ body {
 					}
 					.product-caption{
 						font-size: 143%;
+						background-color: #F5F5F5;
 						display: block;
 						padding: 0px;
 						box-shadow: 0px 3px 2px 0px #f26d13;
@@ -1728,7 +1752,7 @@ body {
 			display: block;
 			outline: none;
 			border: 3px double #f49759;
-			z-index: 2;
+			z-index: 3;
 			&:after{
 				color: orangered;
 				font-size: 160%;
