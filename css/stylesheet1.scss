@@ -1649,13 +1649,24 @@ body {
 									right: 95%;
 									top: 1px;
 								}
-								ul{
+								ul, ol{
 									font-size: 92.8568%;
 									border-bottom: none;
 									margin-bottom: 0px;
 									padding: 0px;
-									ul{
+									ul, ol{
 										font-size: 100%;
+									}
+								}
+								ol{
+									counter-reset: list;
+									li{
+										&:before{
+											content: counter(list) ").";
+											counter-increment: list;
+											top: 0px;
+											margin: 0px -2px 0px 0px;
+										}
 									}
 								}
 							}
