@@ -596,19 +596,21 @@ body {
                         list-style-type: decimal;
                         ol{
                             margin-top: 6px;
-                            margin-left: 21px;
+                            margin-left: 24px;
                             font-size: 100%;
                             counter-reset: numlist;
                             li{
                                 font-size: 100%;
                                 list-style-type: none;
-                                display: flex;
-                                flex-wrap: nowrap;
+								position: relative;
                                 &:before{
                                     content: counter(numlist) "). ";
                                     counter-increment: numlist;
-                                    margin: 0px 6px 0px 0px;
+                                    margin: 0px 3px 0px 0px;
                                     display: inline-block;
+									position: absolute;
+									right: 100%;
+									top: 0px;
                                 }
                             }
                         }
