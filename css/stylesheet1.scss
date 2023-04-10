@@ -1838,6 +1838,26 @@ body {
                 -webkit-text-stroke-color: #818a91;
             }
         }
+        ul{
+            border-left: 1px solid #cccccc;
+            padding: 11px 0px 0px 20px;
+            margin: -13px 0px 0px 12px;
+            li{
+                list-style-type: none;
+                position: relative;
+                &:before{
+                    content: "";
+                    background-color: #cccccc;
+                    display: block;
+                    width: 10px;
+                    height: 1px;
+                    left: -20px;
+                    top: 50%;
+                    position: absolute;
+                    transform: translateY(-50%);
+                }
+            }
+        }
         li, p{
             a{
                 color: #575250;
