@@ -149,6 +149,13 @@
                 box-shadow: inset 0px 0px 6px 5px #f94f06;
             }
         }
+        &.needs-validation{
+            &.was-validated{
+                .valid-feedback, .invalid-feedback{
+                    font-size: 126%;
+                }
+            }
+        }
     }
 }
 

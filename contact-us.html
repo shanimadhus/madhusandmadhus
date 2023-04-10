@@ -91,33 +91,33 @@
                     <div class="col-12">
                       <div class="input-group">
                         <div class="form-group">
-                          <label for="contactfirstname">First Name <span class="req">*</span>
-                            <input type="text" class="form-control" placeholder="Type fullname here" id="contactfirstname" name="contactfirstname" required>
-                          </label>
+                          <label for="contactfirstname">First Name <span class="req">*</span></label>
+                          <input type="text" class="form-control" placeholder="Type fullname here" id="contactfirstname" name="contactfirstname" pattern="[A-Z a-z]+" required>
                           <div class="valid-feedback">Valid.</div>
-                          <div class="invalid-feedback">Please fill out this field.</div>
+                          <div class="invalid-feedback">Invalid First name, please fill out this field.</div>
                         </div>
                         <div class="form-group">
-                          <label for="contactlastname">Last Name <span class="req">*</span>
-                            <input type="text" class="form-control" placeholder="Type lastname here" id="contactlastname" name="contactlastname" required>
-                          </label>
+                          <label for="contactlastname">Last Name <span class="req">*</span></label>
+                          <input type="text" class="form-control" placeholder="Type lastname here" id="contactlastname" name="contactlastname" pattern="[A-Z a-z]+" required>
                           <div class="valid-feedback">Valid.</div>
-                          <div class="invalid-feedback">Please fill out this field.</div>
+                          <div class="invalid-feedback">Invalid Last name, please fill out this field.</div>
                         </div>
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="form-group">
-                        <label for="contactemail">Email <span class="req">*</span>
+                        <label for="contactemail">Email <span class="req">*</span></label>
                           <input type="email" class="form-control" placeholder="Type email address here" id="contactemail" name="contactemail" required>
-                        </label>
+                          <div class="valid-feedback">Valid email.</div>
+                          <div class="invalid-feedback">Invalid email, please fill out this field.</div>
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="form-group">
-                        <label for="contactmsg">Comment or Message <span class="req">*</span>
+                        <label for="contactmsg">Comment or Message <span class="req">*</span></label>
                           <textarea class="form-control" rows="5" placeholder="Type message or comment here" id="contactmsg" name="contactmsg" required></textarea>
-                        </label>
+                          <div class="valid-feedback">Valid.</div>
+                          <div class="invalid-feedback">Please fill out this field.</div>
                       </div>
                     </div>
                     <div class="col-12">
@@ -193,7 +193,6 @@
 <script src="js/bootstrap-4.4.1.js"></script> 
 <!-- InstanceBeginEditable name="Scripts" --> 
 <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script> 
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> 
 <!-- InstanceEndEditable --> 
 <script src="js/madhusScripts.js"></script>
 </body>

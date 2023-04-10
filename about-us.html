@@ -93,25 +93,26 @@
                 <div class="row">
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
-                      <label for="reportname">Name <span class="req">*</span>
-                        <input type="text" class="form-control" placeholder="Type name here" id="reportname" name="reportname" required>
-                      </label>
+                      <label for="reportname">Name <span class="req">*</span></label>
+                        <input type="text" class="form-control" placeholder="Type name here" id="reportname" name="reportname" pattern="[A-Z a-z]+" required>
                       <div class="valid-feedback">Valid.</div>
-                      <div class="invalid-feedback">Please fill out this field.</div>
+                      <div class="invalid-feedback">Invalid name, please fill out this field.</div>
                     </div>
                   </div>
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
-                      <label for="reportdesignation">Designation <span class="req">*</span>
+                      <label for="reportdesignation">Designation <span class="req">*</span></label>
                         <input type="text" class="form-control" placeholder="Type designation here" id="reportdesignation" name="reportdesignation" required>
-                      </label>
+                      <div class="valid-feedback">Valid.</div>
+                      <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="form-group">
-                      <label for="reportdescription">Description <span class="req">*</span>
+                      <label for="reportdescription">Description <span class="req">*</span></label>
                         <textarea class="form-control" rows="3" placeholder="Type description here" id="reportdescription" name="reportdescription" required></textarea>
-                      </label>
+                      <div class="valid-feedback">Valid.</div>
+                      <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
                   </div>
                 </div>
