@@ -1770,9 +1770,11 @@ body {
         }
         h3{
             [class*="fa-"]{
-                font-size: 112%;
-                color: #ccc;
-                -webkit-text-stroke-color: #ccc;
+                font-size: 100%;
+                color: #818a91;
+                float: left;
+                margin: 0px 6px 6px 0px;
+                -webkit-text-stroke-color: #818a91;
             }
         }
         li, p{
