@@ -141,10 +141,12 @@ $(function () {
     $("header").toggleClass("madhusgrey");
   });
   //anim AOS
-  AOS.init({
-    duration: 1200,
-    once: true
-  });
+	if($("[data-aos]").length > 0){
+		AOS.init({
+			duration: 1200,
+			once: true
+		  });
+	}
   //Swiper
   if ($(".madhus_clients_1").length > 0) {
     const swiper = new Swiper('.madhus_clients_1', {

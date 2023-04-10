@@ -462,8 +462,8 @@
           transform: scale(-1, -1); }
 
 .fa-rotate-by {
-  -webkit-transform: rotate(var(--fa-rotate-angle, none));
-          transform: rotate(var(--fa-rotate-angle, none)); }
+  -webkit-transform: rotate(var(--fa-rotate-angle));
+          transform: rotate(var(--fa-rotate-angle)); }
 
 .fa-stack {
   display: inline-block;
@@ -6372,7 +6372,9 @@ readers do not read off random characters that represent icons */
   border-width: 0; }
 :root, :host {
   --fa-style-family-brands: 'Font Awesome 6 Brands';
-  --fa-font-brands: normal 400 1em/1 'Font Awesome 6 Brands'; }
+  --fa-font-brands: normal 400 1em/1 'Font Awesome 6 Brands'; 
+	--fa-rotate-angle: 45deg;
+}
 
 @font-face {
   font-family: 'Font Awesome 6 Brands';
