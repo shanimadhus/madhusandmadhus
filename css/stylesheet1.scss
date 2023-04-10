@@ -560,7 +560,60 @@ body {
                 @include default_docset;
             }
         }
-
+        .madhus_default{
+            &.docset2{
+                padding-bottom: 60px;
+                @include default_docset;
+                ul{
+                    font-size: 170%;
+                    margin-left: 42px;
+                    li{
+                        font-size: 100%;
+                        line-height: normal;
+                        ul, ol{
+                            margin-top: 6px;
+                            margin-left: 21px;
+                            font-size: 100%;
+                            li{
+                                font-size: 100%;
+                            }
+                        }
+                    }
+                }
+                ol{
+                    font-size: 170%;
+                    margin-left: 42px;
+                    li{
+                        font-size: 100%;
+                        line-height: normal;
+                        list-style-type: decimal;
+                        ol{
+                            margin-top: 6px;
+                            margin-left: 21px;
+                            font-size: 100%;
+                            counter-reset: numlist;
+                            li{
+                                font-size: 100%;
+                                list-style-type: none;
+                                display: flex;
+                                flex-wrap: nowrap;
+                                &:before{
+                                    content: counter(numlist) "). ";
+                                    counter-increment: numlist;
+                                    margin: 0px 6px 0px 0px;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 767px){
+                    ol, ul{
+                        margin-left: 21px;
+                    }
+                }
+            }
+        }
         span.req {
             color: red;
         }
