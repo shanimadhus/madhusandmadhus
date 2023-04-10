@@ -117,7 +117,6 @@
             width: 100%;
             margin-top: 6px;
         }
-
         * {
             font-size: 100%;
         }
@@ -125,7 +124,7 @@
 
     form {
         padding: 10px 5px;
-
+        user-select: none;
         button {
             font-size: 170%;
             color: #ffffff;
@@ -1763,6 +1762,90 @@ body {
 			}
 		}
 	}
+    
+    //Contact
+    #madhus_contact{
+        h3{
+            [class*="fa-"]{
+                font-size: 112%;
+                color: #ccc;
+                -webkit-text-stroke-color: #ccc;
+            }
+        }
+        li, p{
+            a{
+                color: #575250;
+                text-decoration: none;
+                &:hover, &:focus{
+                    color: orangered;
+                }
+                &:active{
+                    color: #C63500;
+                }
+            }
+        }
+        form{
+            .input-group{
+                flex-wrap: nowrap;
+                column-gap: 16px;
+                .form-group{
+                    width: 100%;
+                }
+            }
+            .checkboxstyle1{
+                font-size: 80%;
+                label{
+                    position: relative;
+                    input[type="checkbox"]{
+                        opacity: 0;
+                        z-index: -1;
+                        position: absolute;
+                        &:focus{
+                            + .checkbox{
+                                border-color: #80bdff;
+                                outline: 0;
+                                box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                            }
+                        }
+                        &:checked{
+                            + .checkbox{
+                                background-color: #fa753b;
+                                .eicon-check{
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    .checkbox{
+                        display: block;
+                        text-align: center;
+                        background-color: #ffffff;
+                        width: 20px;
+                        height: 20px;
+                        background-clip: padding-box;
+                        border: 1px solid #ced4da;
+                        border-radius: 0.25rem;
+                        margin: 3px 6px 3px 0px;
+                        padding: 0px;
+                        min-width: 20px;
+                        .eicon-check{
+                            color: #ffffff;
+                            display: none;;
+                            margin-top: 3px;
+                        }
+                    }
+                }
+            }                
+            @media (max-width: 576px){
+               .input-group{
+                    flex-wrap: wrap;
+                } 
+            }
+            button{
+                margin-top: 16px;
+            }
+        }
+    }
 
     //Subheader
     #madhus_subheader {
