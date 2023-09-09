@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
-<loc>https://madhusandmadhus.com/index.html</loc>
+<loc>https://madhusandmadhus.com/</loc>
 <lastmod>2023-09-04T05:01:04+01:00</lastmod>
 <priority>1.0</priority>
 <image:image>
@@ -100,6 +100,11 @@
 <image:image>
 <image:loc>https://madhusandmadhus.com/images/clients/29.png</image:loc>
 </image:image>
+</url>
+<url>
+<loc>https://madhusandmadhus.com/index.html</loc>
+<lastmod>2023-09-04T05:01:04+01:00</lastmod>
+<priority>1.0</priority>
 </url>
 <url>
 <loc>https://madhusandmadhus.com/about-us.html</loc>
