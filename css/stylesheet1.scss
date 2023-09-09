@@ -461,7 +461,7 @@ body {
                     padding: 13px 31px;
                     white-space: normal;
                     word-wrap: break-word;
-
+					&.active,
                     &:hover,
                     &:focus {
                         background-color: #080808;

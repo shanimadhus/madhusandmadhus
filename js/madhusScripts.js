@@ -137,16 +137,39 @@ function photoslide(obj1, obj2, obj3) {
 
 $(function () {
   $("main").addClass("show");
+  var path = window.location.pathname;
+  var page = path.split("/").pop();
+  //console.log( page );
+  if (page != "") {
+    $(".nav-item .nav-link").each(function () {
+      var linkname = $(this).attr("href");
+      if (page == linkname) {
+        $(this).parent().addClass("active");
+        //console.log(linkname);
+      }
+    });
+    $(".dropdown-menu .dropdown-item").each(function () {
+      var sublinkname = $(this).attr("href");
+      if (page == sublinkname) {
+        $(this).addClass("active");
+        $(this).parent().parent().addClass("active");
+        //console.log(sublinkname);
+      }
+    });
+    var linklength = $(".nav-item .nav-link").length;
+
+
+  }
   $("#madhusbtn1").click(function () {
     $("header").toggleClass("madhusgrey");
   });
   //anim AOS
-	if($("[data-aos]").length > 0){
-		AOS.init({
-			duration: 1200,
-			once: true
-		  });
-	}
+  if ($("[data-aos]").length > 0) {
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  }
   //Swiper
   if ($(".madhus_clients_1").length > 0) {
     const swiper = new Swiper('.madhus_clients_1', {
